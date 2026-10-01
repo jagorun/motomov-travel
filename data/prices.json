@@ -1,6 +1,6 @@
 {
-  "updatedAt": null,
-  "slot": null,
+  "updatedAt": "2026-10-01T09:50:00+03:00",
+  "slot": "utro",
   "query": {
     "operator": "Библио-Глобус",
     "from": "Москва",
@@ -12,8 +12,19 @@
     "meal": "AI",
     "currency": "RUB"
   },
-  "usd": null,
-  "weather": [],
-  "hotels": [],
-  "note": "Первый выпуск появится после утреннего или вечернего прогона бота."
+  "usd": { "value": 83.5588, "date": "01.10.2026", "source": "https://ru.myfin.by/currency/cb-rf/usd" },
+  "weather": [
+    { "place": "Анталия", "temp": "+24 днём / +17 ночью", "text": "31.10.2026, морось, вероятность осадков 61%, вода +24. Источник: pogoda.365c.ru", "source": "https://pogoda.365c.ru/turkey/antalya/d/31-oktyabrya" },
+    { "place": "Кемер", "temp": "+25 днём / +17 ночью", "text": "31.10.2026, по часам осадков 0 мм, ветер 2–3 м/с. Источник: weather.rambler.ru", "source": "https://weather.rambler.ru/v-kemere/31-october/" }
+  ],
+  "hotels": [
+    { "name": "Akra Antalya Hotel 5*", "resort": "Анталия, Лара", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [{ "title": "На карточке оператора: депозит 100 евро за сутки за номер, ответ отеля 04.08.2026", "url": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102626219120&action=shw" }] },
+    { "name": "Arum Barut Collection 5*", "resort": "Сиде", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
+    { "name": "Barut Hemera 5*", "resort": "Сиде", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102625076666&action=shw", "reason": "Карточка отеля есть, цены пакета на 31.10.2026 нет. Цену не подставлял.", "news": [] },
+    { "name": "Dobedan Exclusive Hotel & Spa 5*", "resort": "Кемер", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
+    { "name": "Kirman Belazur Resort & Spa 5*", "resort": "Белдиби", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
+    { "name": "Nirvana Dolce Vita Hotel 5*", "resort": "Кемер", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
+    { "name": "Voyage Sorgun 5*", "resort": "Соргун", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] }
+  ],
+  "note": "Конструктор на 31.10.2026 из Москвы открылся, но фильтр по семи отелям и 8 ночам AI в этой съёмке не дошёл до выдачи. Цены пакетов не выдуманы."
 }
