@@ -1,0 +1,19 @@
+{
+  "updatedAt": null,
+  "slot": null,
+  "query": {
+    "operator": "Библио-Глобус",
+    "from": "Москва",
+    "country": "Турция",
+    "route": "Туры в Анталию Аэрофлот/АК Россия",
+    "date": "2026-10-31",
+    "nights": 8,
+    "adults": 2,
+    "meal": "AI",
+    "currency": "RUB"
+  },
+  "usd": null,
+  "weather": [],
+  "hotels": [],
+  "note": "Первый выпуск появится после утреннего или вечернего прогона бота."
+}

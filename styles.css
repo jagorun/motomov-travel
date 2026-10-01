@@ -1,0 +1,87 @@
+:root{
+  --bg0:#f3efe6;
+  --bg1:#e7e2d4;
+  --card:rgba(255,252,246,.94);
+  --accent:#2c6b3c;
+  --accent-dim:#3d8a4c;
+  --accent-soft:rgba(44,107,60,.12);
+  --text:#2a2e2a;
+  --muted:#5c645c;
+  --line:rgba(44,107,60,.2);
+  --radius:1.25rem;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:Consolas,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font);
+  color:var(--text);
+  min-height:100vh;
+  background:
+    radial-gradient(900px 420px at 8% -6%,rgba(44,107,60,.07),transparent 55%),
+    radial-gradient(640px 380px at 96% 4%,rgba(180,150,90,.08),transparent 52%),
+    linear-gradient(165deg,var(--bg0),var(--bg1) 55%,#efe9db);
+  padding:1.25rem;
+  line-height:1.62;
+}
+.bg-grid{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(44,107,60,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(44,107,60,.035) 1px,transparent 1px);
+  background-size:52px 52px;
+  opacity:.55;
+}
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:1.25rem 0 3rem}
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.brand{display:inline-flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--text)}
+.brand-mark{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--line);background:var(--accent);
+  color:#f7f4ea;display:grid;place-items:center;font-weight:700;
+}
+.brand-name{font-weight:700;font-size:1.05rem}
+.brand-sub{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.nav{display:flex;gap:.45rem;flex-wrap:wrap}
+.nav a{color:var(--muted);text-decoration:none;font-size:.88rem;padding:.45rem .85rem;border-radius:999px;border:1px solid transparent}
+.nav a:hover{color:var(--text);border-color:var(--line);background:var(--accent-soft)}
+.nav a.active{color:#f7f4ea;background:var(--accent);border-color:var(--accent);font-weight:600}
+.hero{
+  background:var(--card);
+  border-radius:calc(var(--radius) + .2rem);
+  padding:2.1rem 1.8rem 1.9rem;
+  text-align:center;
+  border:1px solid var(--line);
+  box-shadow:0 14px 36px rgba(80,70,50,.08);
+}
+.badge{
+  display:inline-block;font-size:.72rem;padding:.2rem .55rem;border-radius:999px;
+  background:var(--accent-soft);border:1px solid var(--line);color:var(--accent);margin-bottom:.85rem
+}
+h1{font-size:clamp(1.7rem,4vw,2.2rem);letter-spacing:-.02em;margin-bottom:.35rem;color:#243028}
+.role{color:var(--accent);font-weight:600;margin-bottom:1rem}
+.bio{color:var(--muted);max-width:38rem;margin:0 auto}
+.side{display:grid;gap:1rem;margin-top:1.25rem}
+@media(min-width:640px){.side{grid-template-columns:1.4fr .8fr}}
+.card{
+  padding:1.25rem 1.35rem;border-radius:var(--radius);
+  border:1px solid var(--line);background:var(--card);
+  border-left:3px solid var(--accent-dim);
+}
+.card h2,.card h3{font-size:1.05rem;margin-bottom:.4rem;color:var(--accent)}
+.card p,.muted{color:var(--muted);font-size:.92rem}
+.meta{margin-top:.7rem;color:var(--muted);font-size:.78rem}
+.price{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.25rem;color:#243028}
+.rank{font-size:.75rem;color:var(--accent);font-weight:700;letter-spacing:.04em}
+.hotel{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}
+.hotel + .hotel{margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--line)}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.45rem}
+.tag{font-size:.75rem;padding:.15rem .5rem;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.news{margin-top:.55rem;font-size:.88rem;color:var(--text)}
+.news a{color:var(--accent)}
+footer.site{margin-top:2.5rem;text-align:center;color:var(--muted);font-size:.8rem}
+footer.site a{color:var(--accent);text-decoration:none}
+.empty{color:var(--muted);text-align:center;padding:1.5rem;border:1px dashed rgba(92,100,92,.35);border-radius:var(--radius)}
+.kv{display:flex;justify-content:space-between;gap:.75rem;padding:.35rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.kv:last-child{border-bottom:0}
