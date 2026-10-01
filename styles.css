@@ -102,3 +102,37 @@ blockquote{margin:.55rem 0 0;padding:.55rem .75rem;border-left:3px solid var(--l
 blockquote p{margin-top:.2rem}
 .wx-item + .wx-item{margin-top:.7rem}
 #panel-chart,#panel-reviews,#panel-weather{margin-top:1.25rem}
+
+/* Dynamics */
+.chart-caption{
+  text-align:center;font-weight:600;color:var(--accent);
+  margin:1.1rem 0 .85rem;font-size:.95rem;
+  letter-spacing:.02em;
+}
+.delta-grid{
+  display:grid;gap:.75rem;
+  grid-template-columns:1fr;
+  margin-top:.75rem;
+}
+@media(min-width:560px){
+  .delta-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:780px){
+  .delta-grid{grid-template-columns:1fr 1fr 1fr}
+}
+.delta-card{
+  padding:.85rem .95rem;border-radius:1rem;
+  border:1px solid var(--line);background:rgba(44,107,60,.04);
+}
+.delta-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.delta-card h3{font-size:.92rem;margin:0;color:#243028;line-height:1.3}
+.delta-price{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.2rem;margin:.35rem 0 .2rem;color:#243028}
+.delta-meta{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}
+.delta-up{color:#8a3d3d;font-weight:700}
+.delta-down{color:#2c6b3c;font-weight:700}
+.delta-flat{color:var(--muted);font-weight:600}
+.delta-na{color:var(--muted);font-style:italic}
+.spark{width:64px;height:24px;flex-shrink:0}
+.chart-box{position:relative;height:260px;margin-top:.5rem}
+#bar-compare{max-height:240px}
+.lines-fallback:empty{display:none}

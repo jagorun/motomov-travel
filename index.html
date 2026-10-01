@@ -25,14 +25,12 @@
         <button type="button" data-tab="weather">Погода</button>
       </nav>
     </header>
-
     <section class="hero">
       <div class="badge">Библио-Глобус · Москва · Аэрофлот</div>
       <h1>Анталия, 31 октября</h1>
       <p class="role">8 ночей · 2 взрослых · всё включено</p>
       <p class="bio" id="updated">Жду сводку.</p>
     </section>
-
     <section class="panel active" id="panel-prices">
       <div class="side">
         <section class="card" id="list">
@@ -51,36 +49,40 @@
         </aside>
       </div>
     </section>
-
     <section class="panel" id="panel-chart">
+      <p class="chart-caption" id="dyn-caption">За тур · 8 ночей · вылет 31.10.2026</p>
       <section class="card">
-        <h2>Сравнение на сегодня</h2>
-        <p class="muted">Минимальный AI-номер, ₽ за двоих с перелётом. Полоска — доля от самого дорогого найденного.</p>
-        <div id="bars"></div>
+        <h2>Сейчас и изменение</h2>
+        <p class="muted">Текущая цена против предыдущей съёмки. Данные только из prices.json и history.json.</p>
+        <div id="deltas" class="delta-grid"></div>
       </section>
       <section class="card" style="margin-top:1rem">
-        <h2>По дням</h2>
-        <p class="muted" id="chart-note">История копится с 1 октября. Пока точка одна — линия появится со второго дня.</p>
-        <div id="lines"></div>
+        <h2>Сейчас vs прошлый снимок</h2>
+        <p class="muted">Столбцы: актуальная цена и предыдущая точка истории по тому же отелю.</p>
+        <div class="chart-box"><canvas id="bar-compare" height="220"></canvas></div>
+      </section>
+      <section class="card" style="margin-top:1rem">
+        <h2>Динамика по съёмкам</h2>
+        <p class="muted" id="chart-note">Линия по каждой реальной точке history.json (утро / скрин / вечер).</p>
+        <div class="chart-box"><canvas id="line-history" height="260"></canvas></div>
+        <div id="lines" class="lines-fallback"></div>
       </section>
     </section>
-
     <section class="panel" id="panel-reviews">
       <section class="card" id="reviews">
-        <h2>Отзывы Google</h2>
+        <h2>Отзывы</h2>
         <p class="muted">Загрузка.</p>
       </section>
     </section>
-
     <section class="panel" id="panel-weather">
       <section class="card" id="weather-full">
         <h2>Погода</h2>
         <p class="muted">Загрузка.</p>
       </section>
     </section>
-
     <footer class="site">Цены — с сайта оператора на момент съёмки, не оферта. Отзывы — открытые карточки Google, не полная лента.</footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
