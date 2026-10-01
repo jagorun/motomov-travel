@@ -34,6 +34,17 @@
         "Arum Barut Collection 5*": 411055,
         "Barut Hemera 5*": 443744
       }
+    },
+    {
+      "at": "2026-10-01T14:33:27+03:00",
+      "slot": "день",
+      "source": "бот, BG Operator URL +4 отеля",
+      "hotels": {
+        "Bellis Deluxe Hotel 5*": 261719,
+        "TUI Blue Sherwood Belek 5* (only adults 16+)": 255019,
+        "Concorde De Luxe Resort 5*": 326489,
+        "Limak Lara Deluxe Hotel & Resort 5*": 281617
+      }
     }
   ]
 }

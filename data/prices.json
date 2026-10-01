@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-01T11:31:58+03:00",
-  "slot": "utro",
+  "updatedAt": "2026-10-01T14:33:27+03:00",
+  "slot": "den",
   "query": {
     "operator": "Библио-Глобус / BG Operator",
     "from": "Москва",
@@ -12,8 +12,8 @@
     "kids": 0,
     "meal": "AI",
     "currency": "RUB",
-    "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
-    "note": "Съёмка по точному URL. Мин. AI/Ultra All на двоих. Crystal Aura не в каноне."
+    "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&F4=102626006545&F4=102625202736&F4=102625076088&F4=102625154308&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
+    "note": "Съёмка по точному URL (+4 F4). Мин. AI/Ultra All на двоих. Crystal Aura не в каноне. Limak Lara Deluxe = BG Limak Lara 5*."
   },
   "usd": {
     "value": 83.5588,
@@ -330,6 +330,158 @@
       "offers": [],
       "news": [],
       "reason": "В выдаче BG есть предложения, но без AI/Ultra All (типы питания: ЗАВТРАКИ, ОБЕДЫ И УЖИНЫ). Мин. не-AI не берём."
+    },
+    {
+      "name": "Bellis Deluxe Hotel 5*",
+      "resort": "Белек, Кадрие",
+      "price": 261719,
+      "room": "STANDARD GARDEN VIEW ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-01 14:33, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "STANDARD GARDEN VIEW ULTRA ALL",
+          "price": 261719
+        },
+        {
+          "room": "CAMELIA GARDEN VIEW ULTRA ALL",
+          "price": 261719
+        },
+        {
+          "room": "STANDARD SEA SIDE VIEW ULTRA ALL",
+          "price": 266897
+        },
+        {
+          "room": "JUNIOR SUITE SEA SIDE VIEW ULTRA ALL",
+          "price": 298165
+        },
+        {
+          "room": "MIMOSA GARDEN VIEW ULTRA ALL",
+          "price": 298165
+        },
+        {
+          "room": "JASMINE POOL VIEW ULTRA ALL",
+          "price": 317149
+        },
+        {
+          "room": "JASMINE LAGOON ROOM DIRECT POOL ACCESS ULTRA ALL",
+          "price": 337758
+        },
+        {
+          "room": "FAMILY ROOM SEA SIDE ULTRA ALL",
+          "price": 410141
+        },
+        {
+          "room": "CAMELIA FAMILY SUPERIOR ULTRA ALL",
+          "price": 417958
+        },
+        {
+          "room": "JASMINE POOL VIEW FAMILY ULTRA ALL",
+          "price": 544249
+        },
+        {
+          "room": "STANDARD SEA VIEW ULTRA ALL",
+          "price": 545670
+        },
+        {
+          "room": "JASMINE LAGOON FAMILY ROOM DIRECT POOL ACCESS ULTRA ALL",
+          "price": 585669
+        },
+        {
+          "room": "VILLA BELLIS ULTRA ALL",
+          "price": 1114081
+        },
+        {
+          "room": "VILLA DIAMOND WITH SPECIAL POOL ULTRA ALL",
+          "price": 1376612
+        }
+      ],
+      "news": []
+    },
+    {
+      "name": "TUI Blue Sherwood Belek 5* (only adults 16+)",
+      "resort": "Белек",
+      "price": 255019,
+      "room": "STANDARD ROOM SIDE SEA VIEW ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-01 14:33, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "STANDARD ROOM SIDE SEA VIEW ULTRA ALL",
+          "price": 255019
+        },
+        {
+          "room": "LAKE HOUSE ULTRA ALL",
+          "price": 292175
+        },
+        {
+          "room": "SWIMM UP ULTRA ALL",
+          "price": 316235
+        }
+      ],
+      "news": []
+    },
+    {
+      "name": "Concorde De Luxe Resort 5*",
+      "resort": "Лара",
+      "price": 326489,
+      "room": "DELUXE LANDVIEW ROOM ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-01 14:33, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "DELUXE LANDVIEW ROOM ULTRA ALL",
+          "price": 326489
+        },
+        {
+          "room": "DELUXE SEA VIEW ROOM ULTRA ALL",
+          "price": 365168
+        },
+        {
+          "room": "DELUXE JUNIOR SUITE ULTRA ALL",
+          "price": 502728
+        },
+        {
+          "room": "DELUXE FAMILY SUITE ULTRA ALL",
+          "price": 640389
+        },
+        {
+          "room": "DELUXE FAMILY DUBLEX ULTRA ALL",
+          "price": 640389
+        },
+        {
+          "room": "GRAND SUITE ULTRA ALL",
+          "price": 915609
+        }
+      ],
+      "news": []
+    },
+    {
+      "name": "Limak Lara Deluxe Hotel & Resort 5*",
+      "resort": "Лара",
+      "price": 281617,
+      "room": "STANDARD ROOM ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-01 14:33, URL сохранён в query.sourceUrl; на BG: «Limak Lara 5*» (код 102625154308) = Limak Lara Deluxe Hotel & Resort",
+      "offers": [
+        {
+          "room": "STANDARD ROOM ULTRA ALL",
+          "price": 281617
+        },
+        {
+          "room": "SUITE ROOM ULTRA ALL",
+          "price": 364559
+        },
+        {
+          "room": "FAMILY ROOM ULTRA ALL",
+          "price": 406182
+        }
+      ],
+      "news": []
     }
   ]
 }
