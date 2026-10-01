@@ -20,6 +20,20 @@
         "Sidemarin Kirman Premium 5*": 247912,
         "Kirman Belazur Resort & Spa 5*": 252481
       }
+    },
+    {
+      "at": "2026-10-01T11:31:58+03:00",
+      "slot": "утро",
+      "source": "бот, BG Operator URL",
+      "hotels": {
+        "Sidemarin Kirman Premium 5*": 247912,
+        "Kirman Belazur Resort & Spa 5*": 252481,
+        "Nirvana Dolce Vita Hotel 5*": 312479,
+        "Voyage Sorgun 5*": 316946,
+        "Dobedan Exclusive Hotel & Spa 5*": 338164,
+        "Arum Barut Collection 5*": 411055,
+        "Barut Hemera 5*": 443744
+      }
     }
   ]
 }

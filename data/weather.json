@@ -1,0 +1,63 @@
+{
+  "scrapedAt": "2026-10-01T11:31:58+03:00",
+  "sources": [
+    {
+      "name": "Open-Meteo forecast",
+      "url": "https://api.open-meteo.com/v1/forecast",
+      "usedFor": "сейчас и ближайшие ~16 дней"
+    },
+    {
+      "name": "Open-Meteo archive 2019–2024",
+      "url": "https://archive-api.open-meteo.com/v1/archive",
+      "usedFor": "климатическая норма 31.10 (не дневной прогноз)"
+    }
+  ],
+  "today": {
+    "date": "2026-10-01",
+    "places": [
+      {
+        "place": "Анталия",
+        "currentTemp": 25.9,
+        "high": 26.6,
+        "low": 21.7,
+        "text": "пасмурно (код 3), влажность ~39%, ветер ~10 км/ч",
+        "precipMm": 0.0,
+        "source": "Open-Meteo current 2026-10-01T11:15 Europe/Moscow"
+      },
+      {
+        "place": "Кемер",
+        "currentTemp": 25.1,
+        "high": 25.9,
+        "low": 22.8,
+        "text": "пасмурно (код 3), влажность ~49%, ветер ~3.5 км/ч",
+        "precipMm": 0.0,
+        "source": "Open-Meteo current 2026-10-01T11:15 Europe/Moscow"
+      }
+    ]
+  },
+  "checkin": {
+    "date": "2026-10-31",
+    "kind": "climate_normal",
+    "label": "типичный конец октября",
+    "note": "Точного прогноза на 31.10.2026 нет (горизонт Open-Meteo ~16 суток от 01.10, последний день 16.10). Ниже — климатическая норма archive на дату 31.10 за 2019–2024.",
+    "places": [
+      {
+        "place": "Анталия",
+        "highAvg": 25.5,
+        "lowAvg": 14.5,
+        "rangeText": "+15…+26",
+        "text": "климатическая норма конца октября, не оперативный прогноз на день",
+        "source": "Open-Meteo archive 31.10 2019–2024"
+      },
+      {
+        "place": "Кемер",
+        "highAvg": 24.4,
+        "lowAvg": 17.1,
+        "rangeText": "+17…+24",
+        "text": "климатическая норма конца октября, не оперативный прогноз на день",
+        "source": "Open-Meteo archive 31.10 2019–2024"
+      }
+    ]
+  },
+  "nearTermNote": "Фактический прогноз Open-Meteo на 01–16.10.2026; 31.10 вне горизонта."
+}

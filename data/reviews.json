@@ -1,45 +1,294 @@
 {
-  "updatedAt": "2026-10-01T11:15:00+03:00",
-  "source": "Google Hotels, снимок 01.10.2026. Это не лента всех свежих отзывов, а рейтинг и последние короткие выдержки, которые удалось открыть.",
+  "updatedAt": "2026-10-01T11:31:58+03:00",
+  "source": "Google (Tripplo «Reviews from Google», Exa place, карточки Google Maps). Где текст/рейтинг Google не сняты — пометка и ссылка, без выдумок. KAYAK для Akra помечен отдельно.",
   "hotels": [
     {
-      "name": "Crystal Aura Aqua Collection 5*",
-      "rating": 4.7,
-      "count": 8216,
-      "url": "https://www.google.com/travel/search?q=Crystal+Aura+Aqua+Collection+Kemer",
+      "name": "Akra Antalya Hotel 5*",
+      "rating": "н/д",
+      "count": 0,
+      "url": "https://www.google.com/maps/search/?api=1&query=Akra+Antalya+Hotel+Lara",
       "reviews": [
-        {"when": "около месяца назад", "score": "5/5", "text": "Гость отдельно благодарит анимационную команду. Google."},
-        {"when": "3 недели назад", "score": "—", "text": "Семья приехала в 23:30, номер не был готов. Tripadvisor, карточка Google."}
+        {
+          "when": "01.10.2026",
+          "score": "—",
+          "text": "Рейтинг и свежие абзацы именно Google Maps в этом проходе автоматически не сняты. Карточка: ссылка ниже. Ниже — свежие verified-отзывы Trip.com (Jun–Aug 2026), явно не Google."
+        },
+        {
+          "when": "Aug 2026 (stay Jun 2026)",
+          "score": "8.2/10 Trip.com",
+          "text": "Ao 11N, Skyline Suite, family: views impeccable, location fantastic, meals excellent, pool and beach great; breakfast staff service awareness a bit below par. Trip.com."
+        },
+        {
+          "when": "Aug 2026 (stay Jun 2026)",
+          "score": "10/10 Trip.com",
+          "text": "Guest User, Deluxe City View: two-night stay; facilities complete, room clean, staff attentive; after 8 PM cool for a stroll. Trip.com."
+        },
+        {
+          "when": "Jul 2026 (stay Jun 2026)",
+          "score": "10/10 Trip.com",
+          "text": "Bol akno, Deluxe City View: best city hotel in Antalya; clean, excellent service, spacious grounds, great beach club; sun hits beach late morning but panoramic pool empty then. Trip.com."
+        },
+        {
+          "when": "Jul 2026 (stay Jun 2026)",
+          "score": "— Trip.com",
+          "text": "✨X✨, Grand Family Sea View: huge gym, three pools, elevator to sea; plentiful breakfast; connecting rooms good for families; friendly staff. Trip.com."
+        },
+        {
+          "when": "Apr 2026 (stay Mar 2026)",
+          "score": "— Trip.com",
+          "text": "Kuailech uxing339, Deluxe Sea View: valet and smooth check-in; 7th-floor sea view; five pools, gym, cliff setting; generous breakfast+dinner package. Trip.com."
+        }
+      ]
+    },
+    {
+      "name": "Arum Barut Collection 5*",
+      "rating": 4.8,
+      "count": 2930,
+      "url": "https://www.google.com/maps/search/?api=1&query=Barut+Hotels+Arum+Side",
+      "reviews": [
+        {
+          "when": "около 2 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Yase Min: семья с 2 детьми — сервис и еда замечательные, hammam/spa расслабили; минус — камни у входа в море и лежаки заняты к 11:00. Google via Tripplo."
+        },
+        {
+          "when": "около 3 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Heidi Richards: поздний прилёт после полуночи — тёплый приём и ужин до 2 ночи; буфеты, коктейли Begonya с видом на море. Google via Tripplo."
+        },
+        {
+          "when": "около 2 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Alina Los Angeles: неделя в конце мая; Room Manager Emre Erdem, Guest Relations Meltem İleri и Irina, pool bar Ömer Çelik — персонал выше всяких похвал. Google via Tripplo."
+        },
+        {
+          "when": "около 3 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Derya Hitchcock: family suite 2060 просторный; персонал дружелюбный; море скалистое для малыша 17 мес., много бассейнов. Google via Tripplo."
+        },
+        {
+          "when": "около 4 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "jemma buck: 11 ночей; коктейли Furkan K и Ali Kemal у pool bar; kids club и mini disco; еда и чистота на высоте. Google via Tripplo."
+        },
+        {
+          "when": "2026-01-10",
+          "score": "5/5",
+          "text": "Third visit this year — facilities and service again 100%. Beach bar at sunset is a highlight. Google via Exa."
+        }
+      ]
+    },
+    {
+      "name": "Barut Hemera 5*",
+      "rating": 4.8,
+      "count": 3789,
+      "url": "https://www.google.com/maps/search/?api=1&query=Barut+Hemera+Side",
+      "reviews": [
+        {
+          "when": "2026-03-09",
+          "score": "5/5",
+          "text": "Brilliant holiday; groundskeeping excellent, staff helpful, food excellent. Only downside: TV not linked to Wi‑Fi for streaming. Google via Exa."
+        },
+        {
+          "when": "2026-02-22",
+          "score": "5/5",
+          "text": "Welcomed like family; rooms spotless; staff attentive and one step ahead. Google via Exa."
+        },
+        {
+          "when": "2026-02-16",
+          "score": "5/5",
+          "text": "Great time; guest relations manager Vural Sönmez arranged birthday; highly recommend. Google via Exa."
+        },
+        {
+          "when": "2025-12-21",
+          "score": "5/5",
+          "text": "Team went above and beyond when one-year-old was briefly unwell — attentive and supportive. Google via Exa."
+        },
+        {
+          "when": "2025-11-29",
+          "score": "5/5",
+          "text": "Family of three, winter sun + birthday/anniversary; refillable bottles, kind staff, food good off-season, patisserie under grapevine. Google via Exa."
+        },
+        {
+          "when": "2025-09-26",
+          "score": "5/5",
+          "text": "Honeymoon 10 nights; impressive hotel and staff throughout; beachfront, ~40 min walk to Side old town. Google via Exa."
+        }
+      ]
+    },
+    {
+      "name": "Dobedan Exclusive Hotel & Spa 5*",
+      "rating": 4.7,
+      "count": 5111,
+      "url": "https://www.google.com/maps/search/?api=1&query=Dobedan+Exclusive+Hotel+%26+Spa",
+      "reviews": [
+        {
+          "when": "2026-01-01",
+          "score": "5/5",
+          "text": "Amazing hotel: classy look, great pools, outstanding food and staff; cinema, bowling, spa. Google via Exa."
+        },
+        {
+          "when": "2025-12-12",
+          "score": "5/5",
+          "text": "Dobedan Exclusive Belek mid-October 2 weeks; loved Jasmine Spa; Deluxe rep Nana very helpful. Google via Exa."
+        },
+        {
+          "when": "2025-11-17",
+          "score": "4/5",
+          "text": "Beautiful hotel, helpful staff; changed rooms due to balcony smoke — without smoking issue would be a favourite. Google via Exa."
+        },
+        {
+          "when": "2025-10-27",
+          "score": "5/5",
+          "text": "8th year at this property under new branding; staff treat returning guests like family. Google via Exa."
+        }
+      ]
+    },
+    {
+      "name": "Kirman Belazur Resort & Spa 5*",
+      "rating": 4.7,
+      "count": 7231,
+      "url": "https://www.google.com/maps/search/?api=1&query=Kirman+Belazur+Resort+Spa+Belek",
+      "reviews": [
+        {
+          "when": "около 3 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Kaan K: Cactus Mexican restaurant highlight; waitress handled a child’s moment with grace. Google via Tripplo."
+        },
+        {
+          "when": "около 3 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "NALİN Toprak: family-friendly; beach bar Şefi & Serkan; breakfast Eray; dinner Mehmet Kurt; Zen spa. Google via Tripplo."
+        },
+        {
+          "when": "около 3 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Franzi Mitsch: Inan the optician rescued a baby bird; food amazing; loud live music till 11pm near kids pool building. Google via Tripplo."
+        },
+        {
+          "when": "около 3 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Alina Maria Dragomir: family of four; child didn’t want to leave; fresh fish, slides, birthday setup in room. Google via Tripplo."
+        },
+        {
+          "when": "около 3 мес. до 01.10.2026",
+          "score": "5/5",
+          "text": "Natalia Czechowska: Signature by Kirman; GM Murat and Guest Relations Yüksel Arıcan. Google via Tripplo."
+        },
+        {
+          "when": "2025-10-21",
+          "score": "5/5",
+          "text": "Early October with husband and son — hotel, staff and food faultless; best buffet in 6 Turkey visits. Google via Exa."
+        }
+      ]
+    },
+    {
+      "name": "Nirvana Dolce Vita Hotel 5*",
+      "rating": 4.7,
+      "count": 5020,
+      "url": "https://www.google.com/maps/search/?api=1&query=Nirvana+Dolce+Vita+Tekirova",
+      "reviews": [
+        {
+          "when": "2025-10-10",
+          "score": "5/5",
+          "text": "Staff friendly; entertainment team engaging; personal assistant Nazar outstanding support. Google via Exa."
+        },
+        {
+          "when": "2025-10-08",
+          "score": "5/5",
+          "text": "Mini Club favourite — creative activities; team patient and caring. Google via Exa."
+        },
+        {
+          "when": "2025-09-30",
+          "score": "5/5",
+          "text": "Second visit this year; excellent service (Sea Club coach Mustafa Devici); themed restaurants. Google via Exa."
+        },
+        {
+          "when": "2025-09-23",
+          "score": "5/5",
+          "text": "Animation team from morning activities to evening shows full of energy. Google via Exa."
+        },
+        {
+          "when": "03.07.2025",
+          "score": "5/5",
+          "text": "Faiq N: персонал улыбается и помогает, заезд понравился. Google (сводка на карточке)."
+        },
+        {
+          "when": "20.04.2025",
+          "score": "5/5",
+          "text": "Meltem K: большой и чистый отель, зоны номеров разделены. Google."
+        }
+      ]
+    },
+    {
+      "name": "Voyage Sorgun 5*",
+      "rating": 4.9,
+      "count": 4522,
+      "url": "https://www.google.com/maps/search/?api=1&query=Voyage+Sorgun+Hotel",
+      "reviews": [
+        {
+          "when": "2026-01-21",
+          "score": "5/5",
+          "text": "Third time; WhatsApp assistants outstanding (Çağla, Yaşar, Aleyna, Sıtkı). Google via Exa."
+        },
+        {
+          "when": "2025-11-09",
+          "score": "5/5",
+          "text": "Perfect family break in 2-bedroom bungalow: clean, excellent service, beach with piers, water park, buffet. Google via Exa."
+        },
+        {
+          "when": "2025-11-09",
+          "score": "5/5",
+          "text": "Pine trees and cats; top-tier service; theme nights; premium drinks; cheesecake at dessert bar. Google via Exa."
+        },
+        {
+          "when": "2025-11-04",
+          "score": "5/5",
+          "text": "Third trip; staff great with kids; WhatsApp assistant until midnight; already booking again. Google via Exa."
+        },
+        {
+          "when": "2026-01-21",
+          "score": "5/5",
+          "text": "Third time; WhatsApp assistants outstanding (Çağla, Yaşar, Aleyna, Sıtkı). (Google via Exa)"
+        }
       ]
     },
     {
       "name": "Sidemarin Kirman Premium 5*",
       "rating": 4.7,
       "count": 7822,
-      "url": "https://www.google.com/travel/search?q=Sidemarin+Kirman+Premium",
+      "url": "https://www.google.com/maps/search/?api=1&query=Sidemarin+Kirman+Premium+Side",
       "reviews": [
-        {"when": "2 недели назад", "score": "5/5", "text": "Katty B, семья: заезд без сбоев, номера чистые и ухоженные. Google."},
-        {"when": "около месяца назад", "score": "5/5", "text": "Michelle Bryan, второй заезд: персонал не к чему придраться. Google."}
-      ]
-    },
-    {
-      "name": "Kirman Belazur Resort & Spa 5*",
-      "rating": 4.7,
-      "count": 6694,
-      "url": "https://www.google.com/travel/search?q=Kirman+Belazur+Resort+Spa+Belek",
-      "reviews": [
-        {"when": "24.09.2026", "score": "отлично", "text": "Nely S, семья: еда, спокойный отдых, много занятий. Tripadvisor в карточке Google."},
-        {"when": "15.09.2026", "score": "слабо", "text": "Chris K: лежаки с утра заняты полотенцами, за шезлонг приходится охотиться. Tripadvisor."}
-      ]
-    },
-    {
-      "name": "Nirvana Dolce Vita Hotel 5*",
-      "rating": 4.7,
-      "count": 4536,
-      "url": "https://www.google.com/travel/search?q=Nirvana+Dolce+Vita+Kemer",
-      "reviews": [
-        {"when": "03.07.2025", "score": "5/5", "text": "Faiq N: персонал улыбается и помогает, заезд понравился целиком. Google, сводка Wanderlog."},
-        {"when": "20.04.2025", "score": "5/5", "text": "Meltem K: большой и чистый отель, зоны номеров разделены. Свежих абзацев Google за осень 2026 в открытом доступе не нашлось."}
+        {
+          "when": "2 недели назад (снимок 01.10)",
+          "score": "5/5",
+          "text": "Katty B, семья: заезд без сбоев, номера чистые и ухоженные. Google."
+        },
+        {
+          "when": "около месяца назад (снимок 01.10)",
+          "score": "5/5",
+          "text": "Michelle Bryan, второй заезд: персонал не к чему придраться. Google."
+        },
+        {
+          "when": "2025-10-29",
+          "score": "5/5",
+          "text": "9 nights; sea/pool view worth extra; drinks great; Ottoman à la carte and Italian snack bar. Google via Exa."
+        },
+        {
+          "when": "2025-10-16",
+          "score": "5/5",
+          "text": "Honeymoon; location perfect; buses to Side/Manavgat 15–20 min; room large and clean. Google via Exa."
+        },
+        {
+          "when": "2025-10-15",
+          "score": "5/5",
+          "text": "Rooms cleaned daily; food delicious with variety; staff kind and smiling. Google via Exa."
+        },
+        {
+          "when": "2025-10-12",
+          "score": "4/5",
+          "text": "More 4★ than 5★ for some; clean; reception/cocktail/pool bar brilliant; food often lukewarm. Google via Exa."
+        }
       ]
     }
   ]

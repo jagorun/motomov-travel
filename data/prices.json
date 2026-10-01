@@ -1,62 +1,48 @@
 {
-  "updatedAt": "2026-10-01T11:07:00+03:00",
-  "slot": "screenshot",
+  "updatedAt": "2026-10-01T11:31:58+03:00",
+  "slot": "utro",
   "query": {
-    "operator": "Библио-Глобус",
+    "operator": "Библио-Глобус / BG Operator",
     "from": "Москва",
     "country": "Турция",
     "route": "Туры в Анталию Аэрофлот/АК Россия",
     "date": "2026-10-31",
     "nights": 8,
     "adults": 2,
+    "kids": 0,
     "meal": "AI",
-    "currency": "RUB"
+    "currency": "RUB",
+    "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
+    "note": "Съёмка по точному URL. Мин. AI/Ultra All на двоих. Crystal Aura не в каноне."
   },
   "usd": {
     "value": 83.5588,
     "date": "01.10.2026",
-    "note": "ЦБ РФ. В шапке Библио-Глобуса на скрине 11:07 был внутренний курс 89.41 ₽."
+    "note": "ЦБ РФ daily_json на момент съёмки."
   },
   "weather": [
     {
       "place": "Анталия сейчас",
       "temp": "+26°",
-      "text": "01.10, 11:15 по местному: +25.9°, пасмурно, осадков нет, ветер 10 км/ч. Днём до +27, ночью +22. Open-Meteo."
+      "text": "01.10.2026, 11:15 Europe/Moscow (Open-Meteo): +25.9°, пасмурно (код 3), осадков нет, влажность 39%, ветер ~10 км/ч. Днём до +26.6, ночью +21.7."
     },
     {
       "place": "Кемер сейчас",
       "temp": "+25°",
-      "text": "01.10, 11:15 по местному: +25.2°, пасмурно, осадков нет, ветер 4 км/ч. Днём до +26, ночью +23. Open-Meteo."
+      "text": "01.10.2026, 11:15 Europe/Moscow (Open-Meteo): +25.1°, пасмурно (код 3), осадков нет, влажность 49%, ветер ~3.5 км/ч. Днём до ~+26, ночью ~+23."
     },
     {
       "place": "Анталия на 31.10",
-      "temp": "≈ +17…+23",
-      "text": "Оперативный прогноз Open-Meteo сейчас только до 16.10 (там +27…+33 в середине месяца). На 31.10 это климатическая оценка конца октября, не прогноз на день. Модели на месяц вперёд расходятся."
+      "temp": "≈ +15…+26",
+      "text": "Оперативный прогноз Open-Meteo от 01.10 сейчас только до 16.10 (на горизонте до ~+27…+33 в середине месяца). 31.10 вне 16-дневного окна — это климатическая норма конца октября по архиву Open-Meteo 2019–2024 для даты 31.10 (ср. макс +25.5°, ср. мин +14.5°), не прогноз на день."
     },
     {
       "place": "Кемер на 31.10",
-      "temp": "≈ +16…+23",
-      "text": "Климатическая норма конца октября около +23 днём и +16 ночью. Долгосрочные прогоны на 31.10 расходятся: от +20/+13 и облачно до +15/+7 с дождём. Купаться ещё можно, августа уже нет."
+      "temp": "≈ +17…+24",
+      "text": "Тоже вне горизонта прогноза (до 16.10). Климатическая норма Open-Meteo archive 2019–2024 на 31.10: ср. макс +24.4°, ср. мин +17.1°. Море смягчает ночь относительно Анталии. Не выдаём это за точный дневной прогноз."
     }
   ],
   "hotels": [
-    {
-      "name": "Crystal Aura Aqua Collection 5*",
-      "resort": "Кемер, Гёйнюк",
-      "price": 208925,
-      "room": "STANDARD ROOM AQUAPARK VIEW ULTIMATE AI",
-      "meal": "AI",
-      "nights": 8,
-      "source": "скрин Библио-Глобус 01.10.2026 11:07",
-      "offers": [
-        {"room": "STANDARD ROOM AQUAPARK VIEW ULTIMATE AI", "price": 208925},
-        {"room": "STANDARD ROOM ULTIMATE AI", "price": 212380},
-        {"room": "STANDARD ROOM SIDE SEA VIEW ULTIMATE AI", "price": 215934},
-        {"room": "STANDARD ROOM WITH TERRACE ULTIMATE AI", "price": 221111},
-        {"room": "FAMILY ROOM ULTIMATE AI", "price": 255523}
-      ],
-      "news": []
-    },
     {
       "name": "Sidemarin Kirman Premium 5*",
       "resort": "Сиде",
@@ -64,13 +50,28 @@
       "room": "STANDARD ROOM LAND VIEW ULTRA ALL",
       "meal": "AI",
       "nights": 8,
-      "source": "скрин Библио-Глобус 01.10.2026 11:07",
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
       "offers": [
-        {"room": "STANDARD ROOM LAND VIEW ULTRA ALL", "price": 247912},
-        {"room": "STANDARD ROOM SEA VIEW ULTRA ALL", "price": 251466},
-        {"room": "FAMILY ROOM LAND VIEW ULTRA ALL", "price": 287404},
-        {"room": "FAMILY ROOM SEA VIEW ULTRA ALL", "price": 291870},
-        {"room": "FAMILY ROOM JACUZZI TERRACE ULTRA ALL", "price": 309535}
+        {
+          "room": "STANDARD ROOM LAND VIEW ULTRA ALL",
+          "price": 247912
+        },
+        {
+          "room": "STANDARD ROOM SEA VIEW ULTRA ALL",
+          "price": 251466
+        },
+        {
+          "room": "FAMILY ROOM LAND VIEW ULTRA ALL",
+          "price": 287404
+        },
+        {
+          "room": "FAMILY ROOM SEA VIEW ULTRA ALL",
+          "price": 291870
+        },
+        {
+          "room": "FAMILY ROOM JACUZZI TERRACE ULTRA ALL",
+          "price": 309535
+        }
       ],
       "news": []
     },
@@ -81,29 +82,133 @@
       "room": "STANDARD LAND VIEW ULTRA ALL",
       "meal": "AI",
       "nights": 8,
-      "source": "скрин Библио-Глобус 01.10.2026 11:07",
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
       "offers": [
-        {"room": "STANDARD LAND VIEW ULTRA ALL", "price": 252481},
-        {"room": "STANDARD SIDE SEA VIEW ULTRA ALL", "price": 256673},
-        {"room": "STANDARD SEA VIEW ULTRA ALL", "price": 271566},
-        {"room": "CLUB FAMILY SUITE FOREST VIEW", "price": 390446},
-        {"room": "CLUB FAMILY SUITE SWIM UP", "price": 423846},
-        {"room": "CLUB FAMILY SUITE GRAND", "price": 440079},
-        {"room": "LUNA SUITE SEA VIEW", "price": 479378},
-        {"room": "NEO FAMILY SUITE LAND VIEW", "price": 501712},
-        {"room": "NEO FAMILY SUITE SEA VIEW", "price": 535112},
-        {"room": "DELUXE FAMILY SUITE", "price": 557345}
+        {
+          "room": "STANDARD LAND VIEW ULTRA ALL",
+          "price": 252481
+        },
+        {
+          "room": "STANDARD SIDE SEA VIEW ULTRA ALL",
+          "price": 258673
+        },
+        {
+          "room": "STANDARD SEA VIEW ULTRA ALL",
+          "price": 271566
+        },
+        {
+          "room": "FAMILY ROOM R.O.H. ULTRA ALL",
+          "price": 355117
+        }
       ],
       "news": []
     },
     {
       "name": "Nirvana Dolce Vita Hotel 5*",
-      "resort": "Кемер, Текирова",
+      "resort": "Кемер",
       "price": 312479,
       "room": "CLUB ROOM FOREST VIEW LOCAL & HEALTHY AI",
       "meal": "AI",
       "nights": 8,
-      "source": "утренний съём бота 01.10.2026 11:03, на скрине отель выбран, строка ниже кадра",
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "CLUB ROOM FOREST VIEW LOCAL & HEALTHY AI",
+          "price": 312479
+        },
+        {
+          "room": "DELUXE LAND VIEW ROOM LOCAL & HEALTHY AI",
+          "price": 328418
+        },
+        {
+          "room": "DELUXE ROOM SEA VIEW (PORTOFINO BUILDING) LOCAL & HEALTHY AI",
+          "price": 344255
+        },
+        {
+          "room": "DELUXE ROOM SEA VIEW (VENEZIA BUILDING) LOCAL & HEALTHY AI",
+          "price": 352275
+        },
+        {
+          "room": "CLUB FAMILY SUITE FOREST VIEW LOCAL & HEALTHY AI",
+          "price": 390446
+        },
+        {
+          "room": "CLUB FAMILY SUITE SWIM UP - (SHARING POOL) LOCAL & HEALTHY AI",
+          "price": 423846
+        },
+        {
+          "room": "CLUB FAMILY SUITE GRAND LOCAL & HEALTHY AI",
+          "price": 446079
+        },
+        {
+          "room": "LUNA SUITE SEA VIEW LOCAL & HEALTHY AI",
+          "price": 479378
+        },
+        {
+          "room": "NIDO FAMILY SUITE LAND VIEW LOCAL & HEALTHY AI",
+          "price": 501712
+        },
+        {
+          "room": "NIDO FAMILY SUITE SEA VIEW LOCAL & HEALTHY AI",
+          "price": 535112
+        },
+        {
+          "room": "DELUXE FAMILY SUITE LOCAL & HEALTHY AI",
+          "price": 557345
+        },
+        {
+          "room": "SUPERIOR VILLA LOCAL & HEALTHY AI",
+          "price": 1055402
+        },
+        {
+          "room": "DELUXE VILLA LOCAL & HEALTHY AI",
+          "price": 1135806
+        },
+        {
+          "room": "SUPERIOR VILLA LOCAL & HEALTHY ULTRA ALL",
+          "price": 1324430
+        },
+        {
+          "room": "DELUXE VILLA LOCAL & HEALTHY ULTRA ALL",
+          "price": 1427270
+        },
+        {
+          "room": "VILLA GRAND LOCAL & HEALTHY ULTRA ALL",
+          "price": 1735891
+        }
+      ],
+      "news": []
+    },
+    {
+      "name": "Voyage Sorgun 5*",
+      "resort": "Соргун",
+      "price": 316946,
+      "room": "BUNGALOW ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "BUNGALOW ULTRA ALL",
+          "price": 316946
+        },
+        {
+          "room": "STANDARD LAND ULTRA ALL",
+          "price": 323849
+        },
+        {
+          "room": "STANDARD SEA ULTRA ALL",
+          "price": 337758
+        },
+        {
+          "room": "BUNGALOW FAMILY ULTRA ALL",
+          "price": 392781
+        },
+        {
+          "room": "STANDARD FAMILY ULTRA ALL",
+          "price": 513286
+        }
+      ],
       "news": []
     },
     {
@@ -113,7 +218,105 @@
       "room": "LANDVIEW STANDARD ROOM ULTRA ALL",
       "meal": "AI",
       "nights": 8,
-      "source": "утренний съём бота 01.10.2026 11:03",
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "LANDVIEW STANDARD ROOM ULTRA ALL",
+          "price": 338164
+        },
+        {
+          "room": "DELUXE BUILDING STANDARD ROOM ULTRA ALL",
+          "price": 346590
+        },
+        {
+          "room": "SIDE SEAVIEW STANDARD ROOM ULTRA ALL",
+          "price": 363341
+        },
+        {
+          "room": "DELUXE BUILDING QUADRIPLE STANDARD ROOM ULTRA ALL",
+          "price": 460292
+        },
+        {
+          "room": "FAMILY ROOM ULTRA ALL",
+          "price": 460495
+        },
+        {
+          "room": "DELUXE BUILDING FAMILY ROOM ULTRA ALL",
+          "price": 473794
+        },
+        {
+          "room": "JUNIOR SUITE ULTRA ALL",
+          "price": 475723
+        },
+        {
+          "room": "ROYAL SUITE ULTRA ALL",
+          "price": 731655
+        },
+        {
+          "room": "SULTAN SUITE ULTRA ALL",
+          "price": 910432
+        },
+        {
+          "room": "MADONNA SUITE ULTRA ALL",
+          "price": 1183825
+        },
+        {
+          "room": "PRESIDENTAL SUITE ULTRA ALL",
+          "price": 1320674
+        }
+      ],
+      "news": []
+    },
+    {
+      "name": "Arum Barut Collection 5*",
+      "resort": "Сиде",
+      "price": 411055,
+      "room": "PREMIUM SUITE ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "PREMIUM SUITE ULTRA ALL",
+          "price": 411055
+        },
+        {
+          "room": "QUEEN FAMILY SUITE ULTRA ALL",
+          "price": 415420
+        },
+        {
+          "room": "PENTHOUSE SUITE  SEAVIEW ULTRA ALL",
+          "price": 449633
+        },
+        {
+          "room": "DELUXE FAMILY SUITE ULTRA ALL",
+          "price": 469226
+        },
+        {
+          "room": "GRAND RESIDENCE ULTRA ALL",
+          "price": 492271
+        }
+      ],
+      "news": []
+    },
+    {
+      "name": "Barut Hemera 5*",
+      "resort": "Сиде",
+      "price": 443744,
+      "room": "DELUXE ROOM SWIM UP ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
+      "offers": [
+        {
+          "room": "DELUXE ROOM SWIM UP ULTRA ALL",
+          "price": 443744
+        },
+        {
+          "room": "FAMILY ROOM ULTRA ALL",
+          "price": 453896
+        }
+      ],
       "news": []
     },
     {
@@ -123,38 +326,10 @@
       "room": "",
       "meal": "AI",
       "nights": 8,
-      "reason": "На скрине отель в выбранных, но строка цены не попала в кадр. Утренний съём: AI на 8 ночей в выдаче не было.",
-      "news": []
-    },
-    {
-      "name": "Arum Barut Collection 5*",
-      "resort": "Сиде",
-      "price": null,
-      "room": "",
-      "meal": "AI",
-      "nights": 8,
-      "reason": "В выбранных на скрине, цена в кадр не попала. Утренний съём: нет в выдаче.",
-      "news": []
-    },
-    {
-      "name": "Barut Hemera 5*",
-      "resort": "Сиде",
-      "price": null,
-      "room": "",
-      "meal": "AI",
-      "nights": 8,
-      "reason": "В выбранных на скрине, цена в кадр не попала. Утренний съём: пакета AI на эту дату не было.",
-      "news": []
-    },
-    {
-      "name": "Voyage Sorgun 5*",
-      "resort": "Соргун",
-      "price": null,
-      "room": "",
-      "meal": "AI",
-      "nights": 8,
-      "reason": "В выбранных на скрине, цена в кадр не попала. Утренний съём: нет в выдаче.",
-      "news": []
+      "source": "BG Operator live HTML 2026-10-01 11:31, URL сохранён в query.sourceUrl",
+      "offers": [],
+      "news": [],
+      "reason": "В выдаче BG есть предложения, но без AI/Ultra All (типы питания: ЗАВТРАКИ, ОБЕДЫ И УЖИНЫ). Мин. не-AI не берём."
     }
   ]
 }
