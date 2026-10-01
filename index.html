@@ -18,8 +18,11 @@
           <span class="brand-sub">туры и отели</span>
         </span>
       </a>
-      <nav class="nav">
-        <a class="active" href="/">Цены</a>
+      <nav class="nav" id="tabs">
+        <button type="button" class="active" data-tab="prices">Цены</button>
+        <button type="button" data-tab="chart">Динамика</button>
+        <button type="button" data-tab="reviews">Отзывы</button>
+        <button type="button" data-tab="weather">Погода</button>
       </nav>
     </header>
 
@@ -27,27 +30,56 @@
       <div class="badge">Библио-Глобус · Москва · Аэрофлот</div>
       <h1>Анталия, 31 октября</h1>
       <p class="role">8 ночей · 2 взрослых · всё включено</p>
-      <p class="bio" id="updated">Жду первый выпуск бота. Цены не выдуманы: пока сводки нет, список пуст.</p>
+      <p class="bio" id="updated">Жду сводку.</p>
     </section>
 
-    <div class="side">
-      <section class="card" id="list">
-        <h2>Отели по цене</h2>
-        <div class="empty" id="empty">Сводка ещё не снята.</div>
-      </section>
-      <aside>
-        <section class="card" id="fx">
-          <h2>Курс</h2>
-          <p class="muted">Доллар ЦБ появится в выпуске.</p>
+    <section class="panel active" id="panel-prices">
+      <div class="side">
+        <section class="card" id="list">
+          <h2>Отели по цене</h2>
+          <div class="empty" id="empty">Сводка ещё не снята.</div>
         </section>
-        <section class="card" id="wx" style="margin-top:1rem">
-          <h2>Погода</h2>
-          <p class="muted">Анталия и Кемер — в выпуске.</p>
-        </section>
-      </aside>
-    </div>
+        <aside>
+          <section class="card" id="fx">
+            <h2>Курс</h2>
+            <p class="muted">Доллар ЦБ появится в выпуске.</p>
+          </section>
+          <section class="card" id="wx" style="margin-top:1rem">
+            <h2>Погода коротко</h2>
+            <p class="muted">Анталия и Кемер — в выпуске.</p>
+          </section>
+        </aside>
+      </div>
+    </section>
 
-    <footer class="site">Цены — с сайта оператора на момент съёмки, не оферта.</footer>
+    <section class="panel" id="panel-chart">
+      <section class="card">
+        <h2>Сравнение на сегодня</h2>
+        <p class="muted">Минимальный AI-номер, ₽ за двоих с перелётом. Полоска — доля от самого дорогого найденного.</p>
+        <div id="bars"></div>
+      </section>
+      <section class="card" style="margin-top:1rem">
+        <h2>По дням</h2>
+        <p class="muted" id="chart-note">История копится с 1 октября. Пока точка одна — линия появится со второго дня.</p>
+        <div id="lines"></div>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-reviews">
+      <section class="card" id="reviews">
+        <h2>Отзывы Google</h2>
+        <p class="muted">Загрузка.</p>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-weather">
+      <section class="card" id="weather-full">
+        <h2>Погода</h2>
+        <p class="muted">Загрузка.</p>
+      </section>
+    </section>
+
+    <footer class="site">Цены — с сайта оператора на момент съёмки, не оферта. Отзывы — открытые карточки Google, не полная лента.</footer>
   </div>
   <script src="app.js"></script>
 </body>

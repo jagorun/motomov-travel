@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-01T11:03:45+03:00",
-  "slot": "utro",
+  "updatedAt": "2026-10-01T11:07:00+03:00",
+  "slot": "screenshot",
   "query": {
     "operator": "Библио-Глобус",
     "from": "Москва",
@@ -14,21 +14,108 @@
   },
   "usd": {
     "value": 83.5588,
-    "date": "01.10.2026"
+    "date": "01.10.2026",
+    "note": "ЦБ РФ. В шапке Библио-Глобуса на скрине 11:07 был внутренний курс 89.41 ₽."
   },
   "weather": [
     {
-      "place": "Анталия",
-      "temp": "+18…+24",
-      "text": "31.10–08.11: в основном солнечно, в начале ноября возможны краткие дожди (easeweather)"
+      "place": "Анталия сейчас",
+      "temp": "+26°",
+      "text": "01.10, 11:15 по местному: +25.9°, пасмурно, осадков нет, ветер 10 км/ч. Днём до +27, ночью +22. Open-Meteo."
     },
     {
-      "place": "Кемер",
-      "temp": "+15…+22",
-      "text": "31.10 около +22/+15, к началу ноября прохладнее; краткие осадки возможны (easeweather)"
+      "place": "Кемер сейчас",
+      "temp": "+25°",
+      "text": "01.10, 11:15 по местному: +25.2°, пасмурно, осадков нет, ветер 4 км/ч. Днём до +26, ночью +23. Open-Meteo."
+    },
+    {
+      "place": "Анталия на 31.10",
+      "temp": "≈ +17…+23",
+      "text": "Оперативный прогноз Open-Meteo сейчас только до 16.10 (там +27…+33 в середине месяца). На 31.10 это климатическая оценка конца октября, не прогноз на день. Модели на месяц вперёд расходятся."
+    },
+    {
+      "place": "Кемер на 31.10",
+      "temp": "≈ +16…+23",
+      "text": "Климатическая норма конца октября около +23 днём и +16 ночью. Долгосрочные прогоны на 31.10 расходятся: от +20/+13 и облачно до +15/+7 с дождём. Купаться ещё можно, августа уже нет."
     }
   ],
   "hotels": [
+    {
+      "name": "Crystal Aura Aqua Collection 5*",
+      "resort": "Кемер, Гёйнюк",
+      "price": 208925,
+      "room": "STANDARD ROOM AQUAPARK VIEW ULTIMATE AI",
+      "meal": "AI",
+      "nights": 8,
+      "source": "скрин Библио-Глобус 01.10.2026 11:07",
+      "offers": [
+        {"room": "STANDARD ROOM AQUAPARK VIEW ULTIMATE AI", "price": 208925},
+        {"room": "STANDARD ROOM ULTIMATE AI", "price": 212380},
+        {"room": "STANDARD ROOM SIDE SEA VIEW ULTIMATE AI", "price": 215934},
+        {"room": "STANDARD ROOM WITH TERRACE ULTIMATE AI", "price": 221111},
+        {"room": "FAMILY ROOM ULTIMATE AI", "price": 255523}
+      ],
+      "news": []
+    },
+    {
+      "name": "Sidemarin Kirman Premium 5*",
+      "resort": "Сиде",
+      "price": 247912,
+      "room": "STANDARD ROOM LAND VIEW ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "скрин Библио-Глобус 01.10.2026 11:07",
+      "offers": [
+        {"room": "STANDARD ROOM LAND VIEW ULTRA ALL", "price": 247912},
+        {"room": "STANDARD ROOM SEA VIEW ULTRA ALL", "price": 251466},
+        {"room": "FAMILY ROOM LAND VIEW ULTRA ALL", "price": 287404},
+        {"room": "FAMILY ROOM SEA VIEW ULTRA ALL", "price": 291870},
+        {"room": "FAMILY ROOM JACUZZI TERRACE ULTRA ALL", "price": 309535}
+      ],
+      "news": []
+    },
+    {
+      "name": "Kirman Belazur Resort & Spa 5*",
+      "resort": "Белек",
+      "price": 252481,
+      "room": "STANDARD LAND VIEW ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "скрин Библио-Глобус 01.10.2026 11:07",
+      "offers": [
+        {"room": "STANDARD LAND VIEW ULTRA ALL", "price": 252481},
+        {"room": "STANDARD SIDE SEA VIEW ULTRA ALL", "price": 256673},
+        {"room": "STANDARD SEA VIEW ULTRA ALL", "price": 271566},
+        {"room": "CLUB FAMILY SUITE FOREST VIEW", "price": 390446},
+        {"room": "CLUB FAMILY SUITE SWIM UP", "price": 423846},
+        {"room": "CLUB FAMILY SUITE GRAND", "price": 440079},
+        {"room": "LUNA SUITE SEA VIEW", "price": 479378},
+        {"room": "NEO FAMILY SUITE LAND VIEW", "price": 501712},
+        {"room": "NEO FAMILY SUITE SEA VIEW", "price": 535112},
+        {"room": "DELUXE FAMILY SUITE", "price": 557345}
+      ],
+      "news": []
+    },
+    {
+      "name": "Nirvana Dolce Vita Hotel 5*",
+      "resort": "Кемер, Текирова",
+      "price": 312479,
+      "room": "CLUB ROOM FOREST VIEW LOCAL & HEALTHY AI",
+      "meal": "AI",
+      "nights": 8,
+      "source": "утренний съём бота 01.10.2026 11:03, на скрине отель выбран, строка ниже кадра",
+      "news": []
+    },
+    {
+      "name": "Dobedan Exclusive Hotel & Spa 5*",
+      "resort": "Кемер",
+      "price": 338164,
+      "room": "LANDVIEW STANDARD ROOM ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "утренний съём бота 01.10.2026 11:03",
+      "news": []
+    },
     {
       "name": "Akra Antalya Hotel 5*",
       "resort": "Анталия, Лара",
@@ -36,14 +123,8 @@
       "room": "",
       "meal": "AI",
       "nights": 8,
-      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075696",
-      "reason": "В выдаче на 8 ночей есть пакеты AO/BB/HB/FB, AI/UAI нет в выдаче",
-      "news": [
-        {
-          "title": "На карточке оператора: депозит 100 евро за сутки за номер (ответ отеля 04.08.2026)",
-          "url": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102626219120&action=shw"
-        }
-      ]
+      "reason": "На скрине отель в выбранных, но строка цены не попала в кадр. Утренний съём: AI на 8 ночей в выдаче не было.",
+      "news": []
     },
     {
       "name": "Arum Barut Collection 5*",
@@ -52,8 +133,7 @@
       "room": "",
       "meal": "AI",
       "nights": 8,
-      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525109583",
-      "reason": "нет в выдаче",
+      "reason": "В выбранных на скрине, цена в кадр не попала. Утренний съём: нет в выдаче.",
       "news": []
     },
     {
@@ -63,58 +143,8 @@
       "room": "",
       "meal": "AI",
       "nights": 8,
-      "source": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102625076666&action=shw",
-      "reason": "нет в выдаче (карточка отеля есть, пакета 31.10.2026 / 8 ночей AI на рейсе Аэрофлот нет)",
-      "news": [
-        {
-          "title": "Отзыв SaleTour 03.08.2026: высокий сервис и семейный отдых в Barut Hemera",
-          "url": "https://saletur.ru/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/%D0%A1%D0%B8%D0%B4%D0%B5/hotel/Barut_Hotels_Hemera_Resort_SPA/otzyv/2327611.htm"
-        }
-      ]
-    },
-    {
-      "name": "Dobedan Exclusive Hotel & Spa 5*",
-      "resort": "Кемер",
-      "price": 338164,
-      "room": "LANDVIEW STANDARD ROOM ULTRA ALL",
-      "meal": "AI",
-      "nights": 8,
-      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075694",
+      "reason": "В выбранных на скрине, цена в кадр не попала. Утренний съём: пакета AI на эту дату не было.",
       "news": []
-    },
-    {
-      "name": "Kirman Belazur Resort & Spa 5*",
-      "resort": "Белдиби",
-      "price": 252481,
-      "room": "STANDARD LAND VIEW ULTRA ALL",
-      "meal": "AI",
-      "nights": 8,
-      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075694",
-      "news": [
-        {
-          "title": "Отзыв TopHotels август 2026: знакомство с сетью Kirman, сильное питание и сервис",
-          "url": "https://tophotels.ru/review/2808992"
-        }
-      ]
-    },
-    {
-      "name": "Nirvana Dolce Vita Hotel 5*",
-      "resort": "Кемер",
-      "price": 312479,
-      "room": "CLUB ROOM FOREST VIEW LOCAL & HEALTHY AI",
-      "meal": "AI",
-      "nights": 8,
-      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075783",
-      "news": [
-        {
-          "title": "Отзыв SaleTour 07.09.2026: море, территория и сервис; аквапарк нестабилен",
-          "url": "https://saletur.ru/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/%D0%A2%D0%B5%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0/hotel/Amara_Dolce_Vita_Luxury/otzyv/2372096.htm"
-        },
-        {
-          "title": "Отзыв SaleTour 30.08.2026: положительный отдых в Nirvana Dolce Vita",
-          "url": "https://saletur.ru/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/%D0%A2%D0%B5%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0/hotel/Amara_Dolce_Vita_Luxury/otzyv/2370287.htm"
-        }
-      ]
     },
     {
       "name": "Voyage Sorgun 5*",
@@ -123,14 +153,8 @@
       "room": "",
       "meal": "AI",
       "nights": 8,
-      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525109583",
-      "reason": "нет в выдаче",
-      "news": [
-        {
-          "title": "Отзыв TopHotels август 2026: Voyage Sorgun разочаровал пляжем и питанием",
-          "url": "https://tophotels.ru/review/2808631"
-        }
-      ]
+      "reason": "В выбранных на скрине, цена в кадр не попала. Утренний съём: нет в выдаче.",
+      "news": []
     }
   ]
 }

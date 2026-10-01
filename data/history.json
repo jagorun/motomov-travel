@@ -1,0 +1,25 @@
+{
+  "note": "Точка — минимальный AI-номер на двоих, 8 ночей с 31.10.2026, Москва, Аэрофлот. Новые съёмки дописывать сюда, старые не стирать.",
+  "points": [
+    {
+      "at": "2026-10-01T11:03:00+03:00",
+      "slot": "утро",
+      "source": "бот",
+      "hotels": {
+        "Kirman Belazur Resort & Spa 5*": 252481,
+        "Nirvana Dolce Vita Hotel 5*": 312479,
+        "Dobedan Exclusive Hotel & Spa 5*": 338164
+      }
+    },
+    {
+      "at": "2026-10-01T11:07:00+03:00",
+      "slot": "скрин",
+      "source": "Библио-Глобус, скрин пользователя",
+      "hotels": {
+        "Crystal Aura Aqua Collection 5*": 208925,
+        "Sidemarin Kirman Premium 5*": 247912,
+        "Kirman Belazur Resort & Spa 5*": 252481
+      }
+    }
+  ]
+}

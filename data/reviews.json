@@ -1,0 +1,46 @@
+{
+  "updatedAt": "2026-10-01T11:15:00+03:00",
+  "source": "Google Hotels, снимок 01.10.2026. Это не лента всех свежих отзывов, а рейтинг и последние короткие выдержки, которые удалось открыть.",
+  "hotels": [
+    {
+      "name": "Crystal Aura Aqua Collection 5*",
+      "rating": 4.7,
+      "count": 8216,
+      "url": "https://www.google.com/travel/search?q=Crystal+Aura+Aqua+Collection+Kemer",
+      "reviews": [
+        {"when": "около месяца назад", "score": "5/5", "text": "Гость отдельно благодарит анимационную команду. Google."},
+        {"when": "3 недели назад", "score": "—", "text": "Семья приехала в 23:30, номер не был готов. Tripadvisor, карточка Google."}
+      ]
+    },
+    {
+      "name": "Sidemarin Kirman Premium 5*",
+      "rating": 4.7,
+      "count": 7822,
+      "url": "https://www.google.com/travel/search?q=Sidemarin+Kirman+Premium",
+      "reviews": [
+        {"when": "2 недели назад", "score": "5/5", "text": "Katty B, семья: заезд без сбоев, номера чистые и ухоженные. Google."},
+        {"when": "около месяца назад", "score": "5/5", "text": "Michelle Bryan, второй заезд: персонал не к чему придраться. Google."}
+      ]
+    },
+    {
+      "name": "Kirman Belazur Resort & Spa 5*",
+      "rating": 4.7,
+      "count": 6694,
+      "url": "https://www.google.com/travel/search?q=Kirman+Belazur+Resort+Spa+Belek",
+      "reviews": [
+        {"when": "24.09.2026", "score": "отлично", "text": "Nely S, семья: еда, спокойный отдых, много занятий. Tripadvisor в карточке Google."},
+        {"when": "15.09.2026", "score": "слабо", "text": "Chris K: лежаки с утра заняты полотенцами, за шезлонг приходится охотиться. Tripadvisor."}
+      ]
+    },
+    {
+      "name": "Nirvana Dolce Vita Hotel 5*",
+      "rating": 4.7,
+      "count": 4536,
+      "url": "https://www.google.com/travel/search?q=Nirvana+Dolce+Vita+Kemer",
+      "reviews": [
+        {"when": "03.07.2025", "score": "5/5", "text": "Faiq N: персонал улыбается и помогает, заезд понравился целиком. Google, сводка Wanderlog."},
+        {"when": "20.04.2025", "score": "5/5", "text": "Meltem K: большой и чистый отель, зоны номеров разделены. Свежих абзацев Google за осень 2026 в открытом доступе не нашлось."}
+      ]
+    }
+  ]
+}
