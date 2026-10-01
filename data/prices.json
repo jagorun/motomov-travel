@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T09:50:00+03:00",
+  "updatedAt": "2026-10-01T11:03:45+03:00",
   "slot": "utro",
   "query": {
     "operator": "Библио-Глобус",
@@ -12,19 +12,125 @@
     "meal": "AI",
     "currency": "RUB"
   },
-  "usd": { "value": 83.5588, "date": "01.10.2026", "source": "https://ru.myfin.by/currency/cb-rf/usd" },
+  "usd": {
+    "value": 83.5588,
+    "date": "01.10.2026"
+  },
   "weather": [
-    { "place": "Анталия", "temp": "+24 днём / +17 ночью", "text": "31.10.2026, морось, вероятность осадков 61%, вода +24. Источник: pogoda.365c.ru", "source": "https://pogoda.365c.ru/turkey/antalya/d/31-oktyabrya" },
-    { "place": "Кемер", "temp": "+25 днём / +17 ночью", "text": "31.10.2026, по часам осадков 0 мм, ветер 2–3 м/с. Источник: weather.rambler.ru", "source": "https://weather.rambler.ru/v-kemere/31-october/" }
+    {
+      "place": "Анталия",
+      "temp": "+18…+24",
+      "text": "31.10–08.11: в основном солнечно, в начале ноября возможны краткие дожди (easeweather)"
+    },
+    {
+      "place": "Кемер",
+      "temp": "+15…+22",
+      "text": "31.10 около +22/+15, к началу ноября прохладнее; краткие осадки возможны (easeweather)"
+    }
   ],
   "hotels": [
-    { "name": "Akra Antalya Hotel 5*", "resort": "Анталия, Лара", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [{ "title": "На карточке оператора: депозит 100 евро за сутки за номер, ответ отеля 04.08.2026", "url": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102626219120&action=shw" }] },
-    { "name": "Arum Barut Collection 5*", "resort": "Сиде", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
-    { "name": "Barut Hemera 5*", "resort": "Сиде", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102625076666&action=shw", "reason": "Карточка отеля есть, цены пакета на 31.10.2026 нет. Цену не подставлял.", "news": [] },
-    { "name": "Dobedan Exclusive Hotel & Spa 5*", "resort": "Кемер", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
-    { "name": "Kirman Belazur Resort & Spa 5*", "resort": "Белдиби", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
-    { "name": "Nirvana Dolce Vita Hotel 5*", "resort": "Кемер", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] },
-    { "name": "Voyage Sorgun 5*", "resort": "Соргун", "price": null, "room": null, "meal": "AI", "nights": 8, "source": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&flt=100411293179&flt2=100510000863&data=31.10.2026", "reason": "Выдача по этому отелю на 8 ночей AI в этой съёмке не получена. Цену не подставлял.", "news": [] }
-  ],
-  "note": "Конструктор на 31.10.2026 из Москвы открылся, но фильтр по семи отелям и 8 ночам AI в этой съёмке не дошёл до выдачи. Цены пакетов не выдуманы."
+    {
+      "name": "Akra Antalya Hotel 5*",
+      "resort": "Анталия, Лара",
+      "price": null,
+      "room": "",
+      "meal": "AI",
+      "nights": 8,
+      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075696",
+      "reason": "В выдаче на 8 ночей есть пакеты AO/BB/HB/FB, AI/UAI нет в выдаче",
+      "news": [
+        {
+          "title": "На карточке оператора: депозит 100 евро за сутки за номер (ответ отеля 04.08.2026)",
+          "url": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102626219120&action=shw"
+        }
+      ]
+    },
+    {
+      "name": "Arum Barut Collection 5*",
+      "resort": "Сиде",
+      "price": null,
+      "room": "",
+      "meal": "AI",
+      "nights": 8,
+      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525109583",
+      "reason": "нет в выдаче",
+      "news": []
+    },
+    {
+      "name": "Barut Hemera 5*",
+      "resort": "Сиде",
+      "price": null,
+      "room": "",
+      "meal": "AI",
+      "nights": 8,
+      "source": "https://www.bgoperator.ru/price.shtml?flt=100411293179&tid=26&code=102625076666&action=shw",
+      "reason": "нет в выдаче (карточка отеля есть, пакета 31.10.2026 / 8 ночей AI на рейсе Аэрофлот нет)",
+      "news": [
+        {
+          "title": "Отзыв SaleTour 03.08.2026: высокий сервис и семейный отдых в Barut Hemera",
+          "url": "https://saletur.ru/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/%D0%A1%D0%B8%D0%B4%D0%B5/hotel/Barut_Hotels_Hemera_Resort_SPA/otzyv/2327611.htm"
+        }
+      ]
+    },
+    {
+      "name": "Dobedan Exclusive Hotel & Spa 5*",
+      "resort": "Кемер",
+      "price": 338164,
+      "room": "LANDVIEW STANDARD ROOM ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075694",
+      "news": []
+    },
+    {
+      "name": "Kirman Belazur Resort & Spa 5*",
+      "resort": "Белдиби",
+      "price": 252481,
+      "room": "STANDARD LAND VIEW ULTRA ALL",
+      "meal": "AI",
+      "nights": 8,
+      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075694",
+      "news": [
+        {
+          "title": "Отзыв TopHotels август 2026: знакомство с сетью Kirman, сильное питание и сервис",
+          "url": "https://tophotels.ru/review/2808992"
+        }
+      ]
+    },
+    {
+      "name": "Nirvana Dolce Vita Hotel 5*",
+      "resort": "Кемер",
+      "price": 312479,
+      "room": "CLUB ROOM FOREST VIEW LOCAL & HEALTHY AI",
+      "meal": "AI",
+      "nights": 8,
+      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525075783",
+      "news": [
+        {
+          "title": "Отзыв SaleTour 07.09.2026: море, территория и сервис; аквапарк нестабилен",
+          "url": "https://saletur.ru/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/%D0%A2%D0%B5%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0/hotel/Amara_Dolce_Vita_Luxury/otzyv/2372096.htm"
+        },
+        {
+          "title": "Отзыв SaleTour 30.08.2026: положительный отдых в Nirvana Dolce Vita",
+          "url": "https://saletur.ru/%D0%A2%D1%83%D1%80%D1%86%D0%B8%D1%8F/%D0%A2%D0%B5%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0/hotel/Amara_Dolce_Vita_Luxury/otzyv/2370287.htm"
+        }
+      ]
+    },
+    {
+      "name": "Voyage Sorgun 5*",
+      "resort": "Соргун",
+      "price": null,
+      "room": "",
+      "meal": "AI",
+      "nights": 8,
+      "source": "https://www.bgoperator.ru/price.shtml?action=price&data=31.10.2026&f7=8&flt=100411293179&flt2=100510000863&id_price=121110211811&tid=211&f1=100525109583",
+      "reason": "нет в выдаче",
+      "news": [
+        {
+          "title": "Отзыв TopHotels август 2026: Voyage Sorgun разочаровал пляжем и питанием",
+          "url": "https://tophotels.ru/review/2808631"
+        }
+      ]
+    }
+  ]
 }
