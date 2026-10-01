@@ -45,6 +45,24 @@
         "Concorde De Luxe Resort 5*": 326489,
         "Limak Lara Deluxe Hotel & Resort 5*": 281617
       }
+    },
+    {
+      "at": "2026-10-01T18:10:00+03:00",
+      "slot": "вечер",
+      "source": "бот, BG Operator URL",
+      "hotels": {
+        "Sidemarin Kirman Premium 5*": 247912,
+        "Kirman Belazur Resort & Spa 5*": 252481,
+        "TUI Blue Sherwood Belek 5* (only adults 16+)": 255019,
+        "Bellis Deluxe Hotel 5*": 261719,
+        "Limak Lara Deluxe Hotel & Resort 5*": 281617,
+        "Nirvana Dolce Vita Hotel 5*": 312479,
+        "Voyage Sorgun 5*": 316946,
+        "Concorde De Luxe Resort 5*": 326489,
+        "Dobedan Exclusive Hotel & Spa 5*": 338164,
+        "Arum Barut Collection 5*": 411055,
+        "Barut Hemera 5*": 443744
+      }
     }
   ]
 }
