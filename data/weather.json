@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-02T07:05:00+03:00",
+  "scrapedAt": "2026-10-02T18:15:00+03:00",
   "sources": [
     {
       "name": "Open-Meteo forecast",
@@ -17,21 +17,21 @@
     "places": [
       {
         "place": "Анталия",
-        "currentTemp": 19.4,
+        "currentTemp": 21.9,
         "high": null,
         "low": null,
-        "text": "небольшой дождь (код 61), ветер ~13 км/ч",
+        "text": "пасмурно (код 3), ветер ~8 км/ч",
         "precipMm": null,
-        "source": "Open-Meteo current 2026-10-02T07:00 Europe/Moscow"
+        "source": "Open-Meteo current 2026-10-02T18:00 Europe/Moscow"
       },
       {
         "place": "Кемер",
-        "currentTemp": 21.1,
+        "currentTemp": 22.4,
         "high": null,
         "low": null,
-        "text": "небольшой дождь (код 61), ветер ~15 км/ч",
+        "text": "пасмурно (код 3), ветер ~15 км/ч",
         "precipMm": null,
-        "source": "Open-Meteo current 2026-10-02T07:00 Europe/Moscow"
+        "source": "Open-Meteo current 2026-10-02T18:00 Europe/Moscow"
       }
     ]
   },

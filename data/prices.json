@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T07:05:00+03:00",
-  "slot": "utro",
+  "updatedAt": "2026-10-02T18:15:00+03:00",
+  "slot": "vecher",
   "query": {
     "operator": "Библио-Глобус / BG Operator",
     "from": "Москва",
@@ -12,24 +12,24 @@
     "kids": 0,
     "meal": "AI",
     "currency": "RUB",
-    "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&F4=102626006545&F4=102625202736&F4=102625076088&F4=102625154308&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
-    "note": "Утренняя съёмка 02.10.2026 slot=utro. Мин. AI/Ultra All на двоих. Crystal Aura не в каноне. Limak Lara Deluxe = BG Limak Lara 5*. Почти все AI-цены чуть ниже вечера 01.10 (~0.3–0.5%)."
+    "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&F4=102626006545&F4=102625202736&F4=102625076088&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
+    "note": "Вечерняя съёмка 02.10.2026 slot=vecher. Мин. AI/Ultra All на двоих. Канон 11 отелей (без Crystal Aura и Limak Lara). Все AI-цены без изменений vs утро 02.10."
   },
   "usd": {
-    "value": 83.2454,
-    "date": "02.10.2026",
-    "note": "ЦБ РФ daily: курс с 02.10.2026 = 83,2454; Previous 01.10 = 83,5588."
+    "value": 83.4839,
+    "date": "03.10.2026",
+    "note": "ЦБ РФ daily: курс с 03.10.2026 = 83,4839; Previous (с 02.10) = 83,2454."
   },
   "weather": [
     {
       "place": "Анталия сейчас",
-      "temp": "+19°",
-      "text": "02.10.2026, 07:00 Europe/Moscow (Open-Meteo): +19.4°, небольшой дождь (код 61), ветер ~13 км/ч."
+      "temp": "+22°",
+      "text": "02.10.2026, 18:00 Europe/Moscow (Open-Meteo): +21.9°, пасмурно (код 3), ветер ~8 км/ч."
     },
     {
       "place": "Кемер сейчас",
-      "temp": "+21°",
-      "text": "02.10.2026, 07:00 Europe/Moscow (Open-Meteo): +21.1°, небольшой дождь (код 61), ветер ~15 км/ч."
+      "temp": "+22°",
+      "text": "02.10.2026, 18:00 Europe/Moscow (Open-Meteo): +22.4°, пасмурно (код 3), ветер ~15 км/ч."
     },
     {
       "place": "Анталия на 31.10",
@@ -48,7 +48,7 @@
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [
         "Tripadvisor (stay сент. 2026): хвалят пирс (~1500 м²) с баром и лежаками, горки, Ottoman/sushi à la carte; минус — иногда бронируют лежаки."
       ],
@@ -82,7 +82,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [
         "TopHotels сент. 2026: семьи отмечают большой пляж/бассейн, мини-клуб, горки и разнообразное питание; концепция семейного ultra all без смены."
       ],
@@ -112,7 +112,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [],
       "price": 254064,
       "room": "STANDARD ROOM SIDE SEA VIEW ULTRA ALL",
@@ -136,7 +136,7 @@
       "resort": "Белек, Кадрие",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [
         "TopHotels/Tripadvisor сент. 2026: повторные гости — аквапарк, зоопарк, детский клуб и Jasmine с видом на бассейн; концепция семейного AI сохраняется."
       ],
@@ -202,35 +202,11 @@
       ]
     },
     {
-      "name": "Limak Lara Deluxe Hotel & Resort 5*",
-      "resort": "Лара",
-      "meal": "AI",
-      "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl; на BG: «Limak Lara 5*» (код 102625154308) = Limak Lara Deluxe Hotel & Resort",
-      "news": [],
-      "price": 280563,
-      "room": "STANDARD ROOM ULTRA ALL",
-      "offers": [
-        {
-          "room": "STANDARD ROOM ULTRA ALL",
-          "price": 280563
-        },
-        {
-          "room": "SUITE ROOM ULTRA ALL",
-          "price": 363194
-        },
-        {
-          "room": "FAMILY ROOM ULTRA ALL",
-          "price": 404662
-        }
-      ]
-    },
-    {
       "name": "Nirvana Dolce Vita Hotel 5*",
       "resort": "Кемер",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [],
       "price": 311309,
       "room": "CLUB ROOM FOREST VIEW LOCAL & HEALTHY AI",
@@ -306,9 +282,9 @@
       "resort": "Соргун",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [
-        "Ранее в отзывах: пляж с пирсами и аквапарк (ноябрь 2025) — без новых сигналов о смене концепции в утреннем проходе 02.10."
+        "Ранее в отзывах: пляж с пирсами и аквапарк — без новых сигналов о смене концепции в вечернем проходе 02.10."
       ],
       "price": 315760,
       "room": "BUNGALOW ULTRA ALL",
@@ -340,9 +316,9 @@
       "resort": "Лара",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [
-        "В свежих отзывах Google (~2 мес. до 01.10.2026) и сводках 2026 отдельно хвалят пирс на пляже с шезлонгами и горки у бассейнов."
+        "В свежих отзывах Google (~2 мес. до 01.10.2026) отдельно хвалят пирс на пляже с шезлонгами и горки у бассейнов."
       ],
       "price": 325267,
       "room": "DELUXE LANDVIEW ROOM ULTRA ALL",
@@ -378,7 +354,7 @@
       "resort": "Кемер",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [],
       "price": 336898,
       "room": "LANDVIEW STANDARD ROOM ULTRA ALL",
@@ -434,7 +410,7 @@
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [],
       "price": 409516,
       "room": "PREMIUM SUITE ULTRA ALL",
@@ -448,7 +424,7 @@
           "price": 413865
         },
         {
-          "room": "PENTHOUSE SUITE SEAVIEW ULTRA ALL",
+          "room": "PENTHOUSE SUITE  SEAVIEW ULTRA ALL",
           "price": 447950
         },
         {
@@ -466,7 +442,7 @@
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [],
       "price": 442083,
       "room": "DELUXE ROOM SWIM UP ULTRA ALL",
@@ -486,12 +462,12 @@
       "resort": "Анталия, Лара",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-02 ~07:05 Europe/Moscow, URL сохранён в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-02 ~18:12 Europe/Moscow, URL сохранён в query.sourceUrl",
       "news": [],
       "price": null,
       "room": "",
       "offers": [],
-      "reason": "В выдаче BG есть предложения, но без AI/Ultra All (типы питания: ЗАВТРАКИ, ОБЕДЫ И УЖИНЫ). Мин. не-AI не берём."
+      "reason": "В выдаче BG есть предложения, но без AI/Ultra All. Мин. не-AI не берём."
     }
   ]
 }
