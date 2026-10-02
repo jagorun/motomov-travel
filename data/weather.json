@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-10-01T11:31:58+03:00",
+  "scrapedAt": "2026-10-02T07:05:00+03:00",
   "sources": [
     {
       "name": "Open-Meteo forecast",
@@ -13,25 +13,25 @@
     }
   ],
   "today": {
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "places": [
       {
         "place": "Анталия",
-        "currentTemp": 25.9,
-        "high": 26.6,
-        "low": 21.7,
-        "text": "пасмурно (код 3), влажность ~39%, ветер ~10 км/ч",
-        "precipMm": 0.0,
-        "source": "Open-Meteo current 2026-10-01T11:15 Europe/Moscow"
+        "currentTemp": 19.4,
+        "high": null,
+        "low": null,
+        "text": "небольшой дождь (код 61), ветер ~13 км/ч",
+        "precipMm": null,
+        "source": "Open-Meteo current 2026-10-02T07:00 Europe/Moscow"
       },
       {
         "place": "Кемер",
-        "currentTemp": 25.1,
-        "high": 25.9,
-        "low": 22.8,
-        "text": "пасмурно (код 3), влажность ~49%, ветер ~3.5 км/ч",
-        "precipMm": 0.0,
-        "source": "Open-Meteo current 2026-10-01T11:15 Europe/Moscow"
+        "currentTemp": 21.1,
+        "high": null,
+        "low": null,
+        "text": "небольшой дождь (код 61), ветер ~15 км/ч",
+        "precipMm": null,
+        "source": "Open-Meteo current 2026-10-02T07:00 Europe/Moscow"
       }
     ]
   },
@@ -39,7 +39,7 @@
     "date": "2026-10-31",
     "kind": "climate_normal",
     "label": "типичный конец октября",
-    "note": "Точного прогноза на 31.10.2026 нет (горизонт Open-Meteo ~16 суток от 01.10, последний день 16.10). Ниже — климатическая норма archive на дату 31.10 за 2019–2024.",
+    "note": "Точного прогноза на 31.10.2026 нет (горизонт Open-Meteo ~16 суток от 02.10, последний день 17.10). Ниже — климатическая норма archive на дату 31.10 за 2019–2024.",
     "places": [
       {
         "place": "Анталия",
@@ -59,5 +59,5 @@
       }
     ]
   },
-  "nearTermNote": "Фактический прогноз Open-Meteo на 01–16.10.2026; 31.10 вне горизонта."
+  "nearTermNote": "Фактический прогноз Open-Meteo на 02–17.10.2026; 31.10 вне горизонта."
 }

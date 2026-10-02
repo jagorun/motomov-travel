@@ -63,6 +63,24 @@
         "Arum Barut Collection 5*": 411055,
         "Barut Hemera 5*": 443744
       }
+    },
+    {
+      "at": "2026-10-02T07:05:00+03:00",
+      "slot": "утро",
+      "source": "бот, BG Operator URL",
+      "hotels": {
+        "Sidemarin Kirman Premium 5*": 246984,
+        "Kirman Belazur Resort & Spa 5*": 251536,
+        "TUI Blue Sherwood Belek 5* (only adults 16+)": 254064,
+        "Bellis Deluxe Hotel 5*": 260739,
+        "Limak Lara Deluxe Hotel & Resort 5*": 280563,
+        "Nirvana Dolce Vita Hotel 5*": 311309,
+        "Voyage Sorgun 5*": 315760,
+        "Concorde De Luxe Resort 5*": 325267,
+        "Dobedan Exclusive Hotel & Spa 5*": 336898,
+        "Arum Barut Collection 5*": 409516,
+        "Barut Hemera 5*": 442083
+      }
     }
   ]
 }
