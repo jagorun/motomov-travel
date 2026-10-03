@@ -53,12 +53,12 @@
       <p class="chart-caption" id="dyn-caption">За тур · 8 ночей · вылет 31.10.2026</p>
       <section class="card">
         <h2>Сейчас и изменение</h2>
-        <p class="muted">Текущая цена против предыдущей съёмки. Данные только из prices.json и history.json.</p>
+        <p class="muted" id="delta-basis">Сравнение со вчерашним выпуском. Утро — к вчерашнему вечеру, вечер — ещё и к сегодняшнему утру.</p>
         <div id="deltas" class="delta-grid"></div>
       </section>
       <section class="card" style="margin-top:1rem">
-        <h2>Сейчас vs прошлый снимок</h2>
-        <p class="muted">Столбцы: актуальная цена и предыдущая точка истории по тому же отелю.</p>
+        <h2>Сейчас vs вчера</h2>
+        <p class="muted">Столбцы: актуальная цена и вчерашний выпуск. Вечером третья колонка — сегодняшнее утро.</p>
         <div class="chart-box"><canvas id="bar-compare" height="220"></canvas></div>
       </section>
       <section class="card" style="margin-top:1rem">
