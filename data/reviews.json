@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T18:15:00+03:00",
-  "source": "Google / Tripadvisor / TopHotels / HolidayCheck / FirstChoice. Тексты на русском (перевод смысла). Вечер 02.10.2026: новые ≤60 дней — Arum (пирс/Begonya), Hemera (сент. Tripadvisor), Belazur (HolidayCheck сент.), Voyage (авг TopHotels: семейный пирс/пляж), Sidemarin (пирс июль + «сдал» сент.), Bellis (аквапарк-корабль 01–09.09), Concorde (пляж июль TopHotels); Akra — нюанс скального пляжа (TopHotels фев). Limak убран из канона. Без затирания базы.",
+  "updatedAt": "2026-10-03T07:05:00+03:00",
+  "source": "Google / Tripadvisor / TopHotels / HolidayCheck / FirstChoice / SaleTur / Biblioglobus. Тексты на русском. Утро 03.10.2026: prepend свежих — Akra (SaleTur авг HB), Arum (HolidayCheck авг + Tripadvisor Naomi сент.), Belazur (Karin HolidayCheck), Sidemarin (TopHotels 01.09 негатив/пирс), Dobedan (Biblioglobus сент. фрагменты), Nirvana (SaleTur авг–сент.). Voyage/Bellis/Hemera/TUI/Concorde без выдуманных новых. Без затирания базы.",
   "hotels": [
     {
       "name": "Akra Antalya Hotel 5*",
@@ -8,6 +8,11 @@
       "count": 0,
       "url": "https://www.google.com/maps/search/?api=1&query=Akra+Antalya+Hotel+Lara",
       "reviews": [
+        {
+          "when": "август 2026 (SaleTur, ЛюдмилаП)",
+          "score": "5/5",
+          "text": "HB (не AI): море чистое и тёплое; спуск на пляж панорамным лифтом, лежаки и полотенца; еда (морепродукты, сыры, десерты); номера просторные; Guest Relations Ясмин и Адиана. SaleTur."
+        },
         {
           "when": "февраль 2026 (TopHotels, подтверждён)",
           "score": "5/5",
@@ -56,6 +61,16 @@
       "count": 2930,
       "url": "https://www.google.com/maps/search/?api=1&query=Barut+Hotels+Arum+Side",
       "reviews": [
+        {
+          "when": "август 2026 (HolidayCheck, Tuba)",
+          "score": "6/6",
+          "text": "Tuba: «турецкий Robinson»; детский клуб (Tugce); вход в море только через пирс/Steg из‑за скал; pool bar и gözleme у пляжа. HolidayCheck."
+        },
+        {
+          "when": "сентябрь 2026 (Tripadvisor via FirstChoice, NaomiMarc23)",
+          "score": "10/10",
+          "text": "NaomiMarc23, 10-й визит (stay сент. 2026): check-in/out, номер с видом на бассейн/море, минибар, лежаки, pool-bar, буфет/Burger Inn, паста; «Mystic Infinity» у pool bar. Tripadvisor / FirstChoice."
+        },
         {
           "when": "сентябрь 2026 (Tripadvisor via FirstChoice)",
           "score": "5/5",
@@ -158,6 +173,16 @@
       "url": "https://www.google.com/maps/search/?api=1&query=Dobedan+Exclusive+Hotel+%26+Spa",
       "reviews": [
         {
+          "when": "28.09.2026 (Biblioglobus)",
+          "score": "5/5",
+          "text": "Сильная анимация, эмоции и активности на территории. Biblioglobus (фрагмент)."
+        },
+        {
+          "when": "11.09.2026 (Biblioglobus)",
+          "score": "4/5",
+          "text": "Детский аквапарк и взрослый бассейн с горками (неглубокий); удобная территория. Biblioglobus (фрагмент)."
+        },
+        {
           "when": "снимок вечер 02.10.2026",
           "score": "4.7 Google",
           "text": "Полный свежий ≤60 дней абзац Tripadvisor/TopHotels в вечернем проходе автоматически не снят (таймаут карточки). В выдаче есть сент. 2026 «10/10» на Tripadvisor — текст целиком не подтверждён, цитату не выдумываем. База (янв 2026 и ранее) сохранена. Рейтинг Google ~4.7 / ~5,1 тыс."
@@ -190,6 +215,11 @@
       "count": 7231,
       "url": "https://www.google.com/maps/search/?api=1&query=Kirman+Belazur+Resort+Spa+Belek",
       "reviews": [
+        {
+          "when": "сентябрь 2026 (HolidayCheck, Karin)",
+          "score": "6/6",
+          "text": "Karin: очень чистые номера; еда и напитки first class; сервис; пляж, лежаки и стеллажи доступны. HolidayCheck."
+        },
         {
           "when": "сентябрь 2026 (HolidayCheck, ~1 нед. до 02.10)",
           "score": "6/6",
@@ -253,6 +283,16 @@
       "count": 5020,
       "url": "https://www.google.com/maps/search/?api=1&query=Nirvana+Dolce+Vita+Tekirova",
       "reviews": [
+        {
+          "when": "07.09.2026 (SaleTur, Юлия)",
+          "score": "—",
+          "text": "Питание вкусное и эстетичное; итальянский à la carte ок; музыка не меняется из года в год; в целом рекомендует. SaleTur (сниппет)."
+        },
+        {
+          "when": "30.08.2026 (SaleTur, анна)",
+          "score": "—",
+          "text": "Пляж и море — сила (чистая вода, заход); платный sundeck; до пляжных ресторанов далеко. SaleTur (сниппет)."
+        },
         {
           "when": "снимок вечер 02.10.2026",
           "score": "4.7 Google",
@@ -334,6 +374,11 @@
       "count": 7153,
       "url": "https://www.google.com/maps/search/?api=1&query=Sidemarin+Kirman+Premium+Side",
       "reviews": [
+        {
+          "when": "конец августа 2026 (TopHotels, опубл. 01.09.2026)",
+          "score": "2/5",
+          "text": "«Завышенные ОЖИДАНИЯ», не рекомендует: поздний check-in 14:30; каменистое дно; пирс великолепный (лежаки, бар, кофе); слух, что после сезона будут дно приводить в порядок; уборка и сервис к «своим»; питание ок, очереди. TopHotels."
+        },
         {
           "when": "сентябрь 2026 (Tripadvisor via FirstChoice)",
           "score": "—",
