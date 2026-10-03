@@ -136,3 +136,6 @@ blockquote p{margin-top:.2rem}
 .chart-box{position:relative;height:260px;margin-top:.5rem}
 #bar-compare{max-height:240px}
 .lines-fallback:empty{display:none}
+
+.delta-lines{display:flex;flex-direction:column;gap:.2rem;margin-top:.15rem}
+.delta-line{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}
