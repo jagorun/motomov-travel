@@ -70,6 +70,15 @@ function buildSeries(history, currentHotels) {
   points.forEach(p => Object.keys(p.hotels || {}).forEach(n => { if (!names.includes(n)) names.push(n); }));
   Object.keys(currentMap).forEach(n => { if (!names.includes(n)) names.push(n); });
 
+  // Charts follow the current prices list. Old history keys for removed hotels stay in history.json.
+  const allowed = {};
+  (currentHotels || []).forEach(h => { if (h && h.name) allowed[h.name] = true; });
+  if (Object.keys(allowed).length) {
+    for (let i = names.length - 1; i >= 0; i--) {
+      if (!allowed[names[i]]) names.splice(i, 1);
+    }
+  }
+
   // Series aligned to history snapshots only (no fake points).
   const labels = points.map(p => {
     const d = new Date(p.at);
@@ -303,13 +312,15 @@ function renderDynamics(history, currentHotels, query) {
   renderLineHistory(pack);
 }
 
-function reviews(data) {
+function reviews(data, allowedNames) {
   const host = document.getElementById("reviews");
   if (!data || !data.hotels) {
     host.innerHTML = "<h2>Отзывы</h2><p class='empty'>Сводки отзывов ещё нет.</p>";
     return;
   }
-  host.innerHTML = "<h2>Отзывы</h2><p class='muted'>" + esc(data.source || "") + "</p>" + data.hotels.map(h => {
+  const allow = allowedNames && allowedNames.length ? new Set(allowedNames) : null;
+  const hotels = allow ? data.hotels.filter(h => allow.has(h.name)) : data.hotels;
+  host.innerHTML = "<h2>Отзывы</h2><p class='muted'>" + esc(data.source || "") + "</p>" + hotels.map(h => {
     const bits = (h.reviews || []).map(r => "<blockquote><b>" + esc(r.score) + "</b> · " + esc(r.when) + "<p>" + esc(r.text) + "</p></blockquote>").join("");
     const rating = h.rating === "н/д" || h.rating == null
       ? "<div class='rating'>н/д <span>· отзывы ниже</span></div>"
@@ -325,13 +336,14 @@ function weather(data) {
   if (!rows.length) return;
   const html = rows.map(w => "<div class='wx-item'><div class='kv'><span>" + esc(w.place) + "</span><b>" + esc(w.temp) + "</b></div><p class='muted'>" + esc(w.text) + "</p></div>").join("");
   side.innerHTML = "<h2>Погода коротко</h2>" + html;
-  host.innerHTML = "<h2>Сейчас и на дату заезда</h2><p class='muted'>Сейчас — Open-Meteo на 1 октября. На 31 октября оперативный прогноз ещё не вышел: это оценка, не обещание.</p>" + html;
+  host.innerHTML = "<h2>Сейчас и на дату заезда</h2><p class='muted'>Сейчас — Open-Meteo на дату съёмки. Если 31 октября вне горизонта прогноза, это написано в карточке и не смешано с фактом.</p>" + html;
 }
 
 function hotels(data) {
   const updated = document.getElementById("updated");
   const when = new Date(data.updatedAt);
-  const slot = data.slot === "vecher" ? "вечер" : (data.slot === "screenshot" ? "скрин Библио-Глобус" : "утро");
+  const slotMap = { vecher: "вечер", screenshot: "скрин Библио-Глобус", utro: "утро", check: "проверка списка" };
+  const slot = slotMap[data.slot] || "выпуск";
   updated.textContent = "Снято " + when.toLocaleString("ru-RU", { timeZone: "Europe/Moscow" }) + " · " + slot + ". Цена за двоих, пакет с перелётом.";
   const fx = document.getElementById("fx");
   if (data.usd) {
@@ -369,7 +381,7 @@ function boot() {
     if (!data || !data.updatedAt) return;
     const list = hotels(data) || [];
     renderDynamics(history, list, data.query);
-    reviews(rev);
+    reviews(rev, (data.hotels || []).map(h => h.name));
   }).catch(() => {});
 }
 
