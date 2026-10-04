@@ -34,7 +34,13 @@
     <section class="panel active" id="panel-prices">
       <div class="side">
         <section class="card" id="list">
-          <h2>Отели по цене</h2>
+          <div class="list-head">
+            <h2>Отели</h2>
+            <div class="sort-tabs" id="sort-tabs" role="group" aria-label="Сортировка">
+              <button type="button" class="active" data-sort="price">По цене</button>
+              <button type="button" data-sort="name">По имени</button>
+            </div>
+          </div>
           <div class="empty" id="empty">Сводка ещё не снята.</div>
         </section>
         <aside>
@@ -54,6 +60,7 @@
       <section class="card">
         <h2>Сейчас и изменение</h2>
         <p class="muted" id="delta-basis">Сравнение со вчерашним выпуском. Утро — к вчерашнему вечеру, вечер — ещё и к сегодняшнему утру.</p>
+        <p class="muted tip">Нажмите на отель — откроется подробный график цены по датам.</p>
         <div id="deltas" class="delta-grid"></div>
       </section>
       <section class="card" style="margin-top:1rem">
@@ -64,7 +71,7 @@
       <section class="card" style="margin-top:1rem">
         <h2>Динамика по съёмкам</h2>
         <p class="muted" id="chart-note">Линия по каждой реальной точке history.json (утро / скрин / вечер).</p>
-        <div class="chart-box"><canvas id="line-history" height="260"></canvas></div>
+        <div class="chart-box chart-box-tall"><canvas id="line-history" height="260"></canvas></div>
         <div id="lines" class="lines-fallback"></div>
       </section>
     </section>
@@ -79,9 +86,28 @@
         <h2>Погода</h2>
         <p class="muted">Загрузка.</p>
       </section>
+      <section class="card" style="margin-top:1rem">
+        <h2>Температура по дням</h2>
+        <p class="muted" id="wx-chart-note">Макс/мин за последние дни (Open-Meteo) и наши снимки утро/вечер из weather-history.json.</p>
+        <div class="chart-box chart-box-tall"><canvas id="wx-history" height="240"></canvas></div>
+      </section>
     </section>
     <footer class="site">Цены — с сайта оператора на момент съёмки, не оферта. Отзывы — открытые карточки Google, не полная лента.</footer>
   </div>
+
+  <div class="modal" id="hotel-modal" hidden>
+    <div class="modal-backdrop" data-close="1"></div>
+    <div class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button type="button" class="modal-close" data-close="1" aria-label="Закрыть">×</button>
+      <p class="modal-kicker" id="modal-kicker">AI · 8 ночей · вылет 31.10.2026</p>
+      <h2 id="modal-title">Отель</h2>
+      <p class="modal-price" id="modal-price"></p>
+      <p class="muted" id="modal-meta"></p>
+      <div class="chart-box chart-box-tall"><canvas id="modal-chart" height="280"></canvas></div>
+      <div id="modal-empty" class="empty" hidden>По этому отелю в history.json пока нет точек.</div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script src="app.js"></script>
 </body>

@@ -19,8 +19,19 @@ const CANON = [
 ];
 const CANON_SET = new Set(CANON);
 
+const WX_PLACES = {
+  "Анталия": { lat: 36.8969, lon: 30.7133 },
+  "Кемер": { lat: 36.5978, lon: 30.5606 }
+};
+
 let barChart = null;
 let lineChart = null;
+let modalChart = null;
+let wxChart = null;
+let dynPack = null;
+let tourCaption = "AI · 8 ночей · вылет 31.10.2026";
+let priceHotelsCache = [];
+let priceSort = "price"; // price | name
 
 function rub(n) {
   if (n == null || Number.isNaN(Number(n))) return "нет цены";
@@ -37,6 +48,21 @@ function esc(s) {
     .replace(/</g, "\u003c")
     .replace(/>/g, "\u003e")
     .replace(/"/g, "\u0026quot;");
+}
+
+/** Stable id for reviews / deep links. ASCII slug from hotel name. */
+function hotelSlug(name) {
+  return String(name || "")
+    .toLowerCase()
+    .replace(/\s*\(only adults[^)]*\)/g, "")
+    .replace(/\s*5\*/g, "")
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "hotel";
+}
+
+function reviewId(name) {
+  return "review-" + hotelSlug(name);
 }
 
 async function getJson(path) {
@@ -211,7 +237,7 @@ function renderDeltas(pack) {
       lines += deltaLine("было утром" + (mWhen ? " (" + mWhen + ")" : ""), r.morning, r.deltaMorning);
     }
     return (
-      "<article class='delta-card'>" +
+      "<article class='delta-card' tabindex='0' role='button' data-hotel='" + esc(r.name) + "' aria-label='График " + esc(shortName(r.name)) + "'>" +
         "<div class='delta-top'>" +
           "<h3>" + esc(shortName(r.name)) + "</h3>" +
           sparkline(r.series, color) +
@@ -223,21 +249,112 @@ function renderDeltas(pack) {
   }).join("");
 }
 
+function openHotelModal(name) {
+  if (!dynPack || !name) return;
+  const info = dynPack.byHotel[name];
+  if (!info) return;
+
+  const modal = document.getElementById("hotel-modal");
+  const title = document.getElementById("modal-title");
+  const priceEl = document.getElementById("modal-price");
+  const meta = document.getElementById("modal-meta");
+  const kicker = document.getElementById("modal-kicker");
+  const empty = document.getElementById("modal-empty");
+  const canvas = document.getElementById("modal-chart");
+
+  kicker.textContent = tourCaption;
+  title.textContent = shortName(name);
+  priceEl.textContent = rub(info.cur);
+  const pts = (info.series || []).filter(v => v != null).length;
+  meta.textContent = pts
+    ? ("Точек в history: " + pts + " · только реальные съёмки, без выдуманных цен.")
+    : "В history.json по этому отелю пока нет точек.";
+
+  const pairs = dynPack.points
+    .map((p, i) => ({ label: dynPack.labels[i], value: info.series[i], at: p.at }))
+    .filter(p => p.value != null);
+
+  if (modalChart) {
+    modalChart.destroy();
+    modalChart = null;
+  }
+
+  if (!pairs.length || typeof Chart === "undefined") {
+    empty.hidden = false;
+    canvas.style.display = "none";
+  } else {
+    empty.hidden = true;
+    canvas.style.display = "block";
+    const color = colors[Math.max(0, dynPack.names.indexOf(name)) % colors.length];
+    modalChart = new Chart(canvas.getContext("2d"), {
+      type: "line",
+      data: {
+        labels: pairs.map(p => p.label),
+        datasets: [{
+          label: shortName(name),
+          data: pairs.map(p => p.value),
+          borderColor: color,
+          backgroundColor: color + "33",
+          fill: true,
+          tension: 0.25,
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          borderWidth: 2.5
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => (ctx.parsed.y == null ? "—" : money.format(ctx.parsed.y) + " ₽")
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { font: { size: 10 }, color: "#5c645c", maxRotation: 40 },
+            grid: { display: false },
+            title: { display: true, text: "Дата / съёмка", color: "#5c645c", font: { size: 11 } }
+          },
+          y: {
+            ticks: { callback: v => money.format(v), font: { size: 11 }, color: "#5c645c" },
+            grid: { color: "rgba(44,107,60,.08)" },
+            title: { display: true, text: "Цена, ₽", color: "#5c645c", font: { size: 11 } }
+          }
+        }
+      }
+    });
+  }
+
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  const closeBtn = modal.querySelector(".modal-close");
+  if (closeBtn) closeBtn.focus();
+}
+
+function closeHotelModal() {
+  const modal = document.getElementById("hotel-modal");
+  if (!modal || modal.hidden) return;
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+  if (modalChart) {
+    modalChart.destroy();
+    modalChart = null;
+  }
+}
+
 function renderBarCompare(pack) {
   const canvas = document.getElementById("bar-compare");
-  const note = document.getElementById("chart-note");
   const rows = pack.names
     .map(name => ({ name, ...pack.byHotel[name] }))
     .filter(r => r.cur != null)
     .sort((a, b) => a.cur - b.cur);
 
   if (!rows.length || typeof Chart === "undefined") {
-    // Fallback: simple HTML bars if Chart.js not loaded
-    const host = document.getElementById("lines");
-    if (!rows.length) {
-      canvas.parentElement.innerHTML = "<p class='empty'>Нет данных для столбцов.</p>";
-      return;
-    }
     return;
   }
 
@@ -310,7 +427,6 @@ function renderLineHistory(pack) {
   }
 
   if (typeof Chart === "undefined") {
-    // Lightweight SVG fallback (same as before, but by points not by days)
     fallback.innerHTML = svgLines(pack);
     return;
   }
@@ -392,9 +508,11 @@ function renderDynamics(history, currentHotels, query, meta) {
     const m = String(query.date).match(/^(\d{4})-(\d{2})-(\d{2})$/);
     if (m) flight = m[3] + "." + m[2] + "." + m[1];
   }
+  tourCaption = "AI · " + nights + " ночей · вылет " + flight;
   cap.textContent = "За тур · " + nights + " ночей · вылет " + flight;
 
   const pack = buildSeries(history, currentHotels, meta);
+  dynPack = pack;
   const basis = document.getElementById("delta-basis");
   if (basis) {
     const y = pack.yesterdayPoint ? ("было вчера — " + pointLabel(pack.yesterdayPoint)) : "за вчера нет выпуска утро/вечер";
@@ -406,6 +524,25 @@ function renderDynamics(history, currentHotels, query, meta) {
   renderDeltas(pack);
   renderBarCompare(pack);
   renderLineHistory(pack);
+}
+
+function switchTab(tab) {
+  const btn = document.querySelector('#tabs button[data-tab="' + tab + '"]');
+  if (!btn) return;
+  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("active", b === btn));
+  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === "panel-" + tab));
+}
+
+function goToReview(name) {
+  const id = reviewId(name);
+  switchTab("reviews");
+  requestAnimationFrame(() => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.add("highlight");
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    setTimeout(() => el.classList.remove("highlight"), 2200);
+  });
 }
 
 function reviews(data) {
@@ -422,7 +559,7 @@ function reviews(data) {
     const rating = h.rating === "н/д" || h.rating == null
       ? "<div class='rating'>н/д <span>· отзывы ниже</span></div>"
       : "<div class='rating'>" + esc(h.rating) + " <span>/ 5 · " + money.format(h.count) + " отзывов</span></div>";
-    return "<article class='review'><h3>" + esc(h.name) + "</h3>" + rating + bits + "<p class='meta'><a href='" + esc(h.url) + "'>Карточка Google</a></p></article>";
+    return "<article class='review' id='" + esc(reviewId(h.name)) + "' data-hotel='" + esc(h.name) + "'><h3>" + esc(h.name) + "</h3>" + rating + bits + "<p class='meta'><a href='" + esc(h.url) + "' target='_blank' rel='noopener'>Карточка Google</a></p></article>";
   }).join("");
 }
 
@@ -436,6 +573,199 @@ function weather(data) {
   host.innerHTML = "<h2>Сейчас и на дату заезда</h2><p class='muted'>Сейчас — Open-Meteo на дату съёмки. Если 31 октября вне горизонта прогноза, это написано в карточке и не смешано с фактом.</p>" + html;
 }
 
+async function fetchDailyTemps(place, coords) {
+  const url = "https://api.open-meteo.com/v1/forecast"
+    + "?latitude=" + coords.lat
+    + "&longitude=" + coords.lon
+    + "&daily=temperature_2m_max,temperature_2m_min"
+    + "&past_days=14&forecast_days=1"
+    + "&timezone=Europe%2FMoscow";
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("wx " + place);
+  const data = await res.json();
+  return {
+    place,
+    dates: (data.daily && data.daily.time) || [],
+    max: (data.daily && data.daily.temperature_2m_max) || [],
+    min: (data.daily && data.daily.temperature_2m_min) || []
+  };
+}
+
+function renderWeatherChart(archiveRows, history) {
+  const canvas = document.getElementById("wx-history");
+  const note = document.getElementById("wx-chart-note");
+  if (!canvas || typeof Chart === "undefined") return;
+
+  const labels = (archiveRows[0] && archiveRows[0].dates) || [];
+  if (!labels.length) {
+    if (note) note.textContent = "Не удалось загрузить архив Open-Meteo.";
+    return;
+  }
+
+  const labelRu = labels.map(d => {
+    const m = String(d).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    return m ? (m[3] + "." + m[2]) : d;
+  });
+
+  const datasets = [];
+  const palette = {
+    "Анталия": { max: "#2c6b3c", min: "rgba(44,107,60,.45)", snap: "#8a5a2b" },
+    "Кемер": { max: "#3d6f8a", min: "rgba(61,111,138,.45)", snap: "#6b4c7a" }
+  };
+
+  archiveRows.forEach(row => {
+    const c = palette[row.place] || { max: "#2c6b3c", min: "rgba(44,107,60,.4)", snap: "#8a5a2b" };
+    datasets.push({
+      label: row.place + " макс",
+      data: row.max,
+      borderColor: c.max,
+      backgroundColor: c.max,
+      tension: 0.25,
+      pointRadius: 3,
+      borderWidth: 2
+    });
+    datasets.push({
+      label: row.place + " мин",
+      data: row.min,
+      borderColor: c.min,
+      backgroundColor: c.min,
+      tension: 0.25,
+      pointRadius: 3,
+      borderWidth: 2,
+      borderDash: [4, 3]
+    });
+  });
+
+  // Overlay our release snapshots onto matching calendar days (avg of snapshot tempC).
+  const snapPoints = ((history && history.points) || []).filter(p => p && p.at && p.places);
+  Object.keys(WX_PLACES).forEach(place => {
+    const c = palette[place] || { snap: "#8a5a2b" };
+    const byDay = {};
+    snapPoints.forEach(p => {
+      const day = moscowYmd(p.at);
+      const info = p.places[place];
+      if (!day || !info || info.tempC == null) return;
+      if (!byDay[day]) byDay[day] = [];
+      byDay[day].push(Number(info.tempC));
+    });
+    const series = labels.map(d => {
+      const arr = byDay[d];
+      if (!arr || !arr.length) return null;
+      return arr.reduce((a, b) => a + b, 0) / arr.length;
+    });
+    if (series.some(v => v != null)) {
+      datasets.push({
+        label: place + " снимок",
+        data: series,
+        borderColor: c.snap,
+        backgroundColor: c.snap,
+        showLine: false,
+        pointRadius: 6,
+        pointStyle: "triangle",
+        borderWidth: 0
+      });
+    }
+  });
+
+  if (note) {
+    const nSnap = snapPoints.length;
+    note.textContent = "Макс/мин по дням — Open-Meteo past_days. Треугольники — наши снимки утро/вечер из weather-history.json"
+      + (nSnap ? (" (" + nSnap + " " + (nSnap === 1 ? "точка" : "точек") + ").") : ".");
+  }
+
+  if (wxChart) wxChart.destroy();
+  wxChart = new Chart(canvas.getContext("2d"), {
+    type: "line",
+    data: { labels: labelRu, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { position: "bottom", labels: { boxWidth: 12, font: { size: 11 } } },
+        tooltip: {
+          callbacks: {
+            label: ctx => (ctx.dataset.label || "") + ": " + (ctx.parsed.y == null ? "—" : ctx.parsed.y.toFixed(1) + " °C")
+          }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { font: { size: 10 }, color: "#5c645c", maxRotation: 40 },
+          grid: { display: false },
+          title: { display: true, text: "Дата", color: "#5c645c", font: { size: 11 } }
+        },
+        y: {
+          ticks: { callback: v => v + "°", font: { size: 11 }, color: "#5c645c" },
+          grid: { color: "rgba(44,107,60,.08)" },
+          title: { display: true, text: "°C", color: "#5c645c", font: { size: 11 } }
+        }
+      }
+    }
+  });
+}
+
+async function loadWeatherHistoryChart() {
+  const note = document.getElementById("wx-chart-note");
+  try {
+    const history = await getJson("data/weather-history.json");
+    const archiveRows = await Promise.all(
+      Object.entries(WX_PLACES).map(([place, coords]) => fetchDailyTemps(place, coords))
+    );
+    renderWeatherChart(archiveRows, history);
+  } catch (err) {
+    if (note) note.textContent = "График погоды недоступен (сеть или API). Блок «сейчас» выше без изменений.";
+  }
+}
+
+function sortedHotels(list, mode) {
+  const rows = (list || []).slice();
+  if (mode === "name") {
+    rows.sort((a, b) => shortName(a.name).localeCompare(shortName(b.name), "ru", { sensitivity: "base" }));
+  } else {
+    rows.sort((a, b) => {
+      if (a.price == null) return 1;
+      if (b.price == null) return -1;
+      return a.price - b.price;
+    });
+  }
+  return rows;
+}
+
+function renderHotelList() {
+  const list = document.getElementById("list");
+  if (!priceHotelsCache.length) return;
+  const listHotels = sortedHotels(priceHotelsCache, priceSort);
+  const title = priceSort === "name" ? "Отели по имени" : "Отели по цене";
+  const head =
+    "<div class='list-head'>" +
+      "<h2>" + title + "</h2>" +
+      "<div class='sort-tabs' id='sort-tabs' role='group' aria-label='Сортировка'>" +
+        "<button type='button' data-sort='price'" + (priceSort === "price" ? " class='active'" : "") + ">По цене</button>" +
+        "<button type='button' data-sort='name'" + (priceSort === "name" ? " class='active'" : "") + ">По имени</button>" +
+      "</div>" +
+    "</div>";
+
+  list.innerHTML = head + listHotels.map((h, i) => {
+    const offers = (h.offers || []).slice(0, 4).map(o => "<div class='kv'><span>" + esc(o.room) + "</span><b>" + rub(o.price) + "</b></div>").join("");
+    const reason = h.price == null && h.reason ? "<p class='muted'>" + esc(h.reason) + "</p>" : "";
+    return (
+      "<article class='hotel' tabindex='0' role='link' data-hotel='" + esc(h.name) + "' aria-label='Отзывы: " + esc(shortName(h.name)) + "'>" +
+        "<div>" +
+          "<div class='rank'>" + (i + 1) + "</div>" +
+          "<h3 class='hotel-link'>" + esc(h.name) + "</h3>" +
+          "<div class='tags'>" +
+            (h.room ? "<span class='tag'>" + esc(h.room) + "</span>" : "") +
+            (h.meal ? "<span class='tag'>" + esc(h.meal) + "</span>" : "") +
+            (h.resort ? "<span class='tag'>" + esc(h.resort) + "</span>" : "") +
+          "</div>" + reason + offers +
+        "</div>" +
+        "<div class='price'>" + rub(h.price) + "</div>" +
+      "</article>"
+    );
+  }).join("");
+}
+
 function hotels(data) {
   const updated = document.getElementById("updated");
   const when = new Date(data.updatedAt);
@@ -447,44 +777,80 @@ function hotels(data) {
     fx.innerHTML = "<h2>Курс</h2><div class='kv'><span>USD ЦБ</span><b>" + data.usd.value + " ₽</b></div><p class='meta'>" + esc(data.usd.date || "") + "</p>" + (data.usd.note ? "<p class='muted'>" + esc(data.usd.note) + "</p>" : "");
   }
   weather(data);
-  const listHotels = (data.hotels || []).filter(h => h && CANON_SET.has(h.name)).slice().sort((a, b) => {
-    if (a.price == null) return 1;
-    if (b.price == null) return -1;
-    return a.price - b.price;
-  });
-  const list = document.getElementById("list");
-  if (!listHotels.length) return;
-  list.innerHTML = "<h2>Отели по цене</h2>" + listHotels.map((h, i) => {
-    const offers = (h.offers || []).slice(0, 4).map(o => "<div class='kv'><span>" + esc(o.room) + "</span><b>" + rub(o.price) + "</b></div>").join("");
-    const reason = h.price == null && h.reason ? "<p class='muted'>" + esc(h.reason) + "</p>" : "";
-    return "<article class='hotel'><div><div class='rank'>" + (i + 1) + "</div><h3>" + esc(h.name) + "</h3><div class='tags'>" +
-      (h.room ? "<span class='tag'>" + esc(h.room) + "</span>" : "") +
-      (h.meal ? "<span class='tag'>" + esc(h.meal) + "</span>" : "") +
-      (h.resort ? "<span class='tag'>" + esc(h.resort) + "</span>" : "") +
-      "</div>" + reason + offers + "</div><div class='price'>" + rub(h.price) + "</div></article>";
-  }).join("");
-  return listHotels;
+  priceHotelsCache = (data.hotels || []).filter(h => h && CANON_SET.has(h.name));
+  if (!priceHotelsCache.length) return [];
+  renderHotelList();
+  return priceHotelsCache;
 }
 
 document.getElementById("tabs").addEventListener("click", ev => {
   const btn = ev.target.closest("button");
   if (!btn) return;
-  document.querySelectorAll("#tabs button").forEach(b => b.classList.toggle("active", b === btn));
-  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === "panel-" + btn.dataset.tab));
+  switchTab(btn.dataset.tab);
+});
+
+document.getElementById("list").addEventListener("click", ev => {
+  const sortBtn = ev.target.closest("#sort-tabs button");
+  if (sortBtn) {
+    const mode = sortBtn.dataset.sort;
+    if (mode && mode !== priceSort) {
+      priceSort = mode;
+      renderHotelList();
+    }
+    return;
+  }
+  const card = ev.target.closest(".hotel");
+  if (!card) return;
+  if (ev.target.closest("a")) return;
+  goToReview(card.dataset.hotel);
+});
+
+document.getElementById("list").addEventListener("keydown", ev => {
+  if (ev.key !== "Enter" && ev.key !== " ") return;
+  const card = ev.target.closest(".hotel");
+  if (!card) return;
+  ev.preventDefault();
+  goToReview(card.dataset.hotel);
+});
+
+document.getElementById("deltas").addEventListener("click", ev => {
+  const card = ev.target.closest(".delta-card");
+  if (!card) return;
+  openHotelModal(card.dataset.hotel);
+});
+
+document.getElementById("deltas").addEventListener("keydown", ev => {
+  if (ev.key !== "Enter" && ev.key !== " ") return;
+  const card = ev.target.closest(".delta-card");
+  if (!card) return;
+  ev.preventDefault();
+  openHotelModal(card.dataset.hotel);
+});
+
+document.getElementById("hotel-modal").addEventListener("click", ev => {
+  if (ev.target.closest("[data-close]")) closeHotelModal();
+});
+
+document.addEventListener("keydown", ev => {
+  if (ev.key === "Escape") closeHotelModal();
 });
 
 function boot() {
-  Promise.all([getJson("data/prices.json"), getJson("data/history.json"), getJson("data/reviews.json")]).then(([data, history, rev]) => {
+  Promise.all([
+    getJson("data/prices.json"),
+    getJson("data/history.json"),
+    getJson("data/reviews.json")
+  ]).then(([data, history, rev]) => {
     if (!data || !data.updatedAt) return;
     const list = hotels(data) || [];
     renderDynamics(history, list, data.query, { updatedAt: data.updatedAt, slot: data.slot });
     reviews(rev);
+    loadWeatherHistoryChart();
   }).catch(() => {});
 }
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
-    // Chart.js is defer — wait a tick if needed
     if (typeof Chart !== "undefined") boot();
     else setTimeout(boot, 50);
   });

@@ -75,12 +75,20 @@ h1{font-size:clamp(1.7rem,4vw,2.2rem);letter-spacing:-.02em;margin-bottom:.35rem
 }
 .card h2,.card h3{font-size:1.05rem;margin-bottom:.4rem;color:var(--accent)}
 .card p,.muted{color:var(--muted);font-size:.92rem}
+.tip{font-size:.82rem;margin-top:.35rem}
 .meta{margin-top:.7rem;color:var(--muted);font-size:.78rem}
 .meta a,blockquote a{color:var(--accent)}
 .price{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.25rem;color:#243028;white-space:nowrap}
 .rank{font-size:.75rem;color:var(--accent);font-weight:700;letter-spacing:.04em}
-.hotel{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}
-.hotel + .hotel{margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--line)}
+.hotel{
+  display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;
+  cursor:pointer;border-radius:.75rem;padding:.35rem .4rem;margin:0 -.4rem;
+  transition:background .15s ease;
+}
+.hotel:hover,.hotel:focus-visible{background:var(--accent-soft);outline:none}
+.hotel + .hotel{margin-top:.5rem;padding-top:.85rem;border-top:1px solid var(--line)}
+.hotel .hotel-link{color:inherit;text-decoration:none}
+.hotel .hotel-link:hover{color:var(--accent)}
 .tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.45rem}
 .tag{font-size:.75rem;padding:.15rem .5rem;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
 footer.site{margin-top:2.5rem;text-align:center;color:var(--muted);font-size:.8rem}
@@ -95,13 +103,34 @@ footer.site{margin-top:2.5rem;text-align:center;color:var(--muted);font-size:.8r
 .chart{width:100%;height:auto;margin-top:.6rem}
 .legend{display:flex;flex-wrap:wrap;gap:.55rem 1rem;margin-top:.6rem;font-size:.78rem;color:var(--muted)}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:.3rem}
+.review{scroll-margin-top:1.25rem}
 .review + .review{margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)}
+.review.highlight{
+  outline:2px solid var(--accent);
+  outline-offset:4px;
+  border-radius:.75rem;
+  background:rgba(44,107,60,.06);
+}
 .rating{font-weight:700;font-size:1.15rem}
 .rating span{font-weight:500;color:var(--muted);font-size:.85rem}
 blockquote{margin:.55rem 0 0;padding:.55rem .75rem;border-left:3px solid var(--line);background:rgba(44,107,60,.05);border-radius:0 .6rem .6rem 0}
 blockquote p{margin-top:.2rem}
 .wx-item + .wx-item{margin-top:.7rem}
 #panel-chart,#panel-reviews,#panel-weather{margin-top:1.25rem}
+
+/* Sort */
+.list-head{
+  display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap;
+  margin-bottom:.55rem;
+}
+.list-head h2{margin:0}
+.sort-tabs{display:flex;gap:.35rem;flex-wrap:wrap}
+.sort-tabs button{
+  font:inherit;font-size:.78rem;padding:.3rem .7rem;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+}
+.sort-tabs button:hover{color:var(--text);background:var(--accent-soft)}
+.sort-tabs button.active{background:var(--accent);border-color:var(--accent);color:#f7f4ea;font-weight:600}
 
 /* Dynamics */
 .chart-caption{
@@ -123,7 +152,14 @@ blockquote p{margin-top:.2rem}
 .delta-card{
   padding:.85rem .95rem;border-radius:1rem;
   border:1px solid var(--line);background:rgba(44,107,60,.04);
+  cursor:pointer;transition:background .15s ease,box-shadow .15s ease,transform .12s ease;
 }
+.delta-card:hover,.delta-card:focus-visible{
+  background:rgba(44,107,60,.1);
+  box-shadow:0 6px 18px rgba(44,107,60,.12);
+  outline:none;
+}
+.delta-card:active{transform:scale(.99)}
 .delta-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
 .delta-card h3{font-size:.92rem;margin:0;color:#243028;line-height:1.3}
 .delta-price{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.2rem;margin:.35rem 0 .2rem;color:#243028}
@@ -134,8 +170,42 @@ blockquote p{margin-top:.2rem}
 .delta-na{color:var(--muted);font-style:italic}
 .spark{width:64px;height:24px;flex-shrink:0}
 .chart-box{position:relative;height:260px;margin-top:.5rem}
+.chart-box-tall{height:300px}
 #bar-compare{max-height:240px}
 .lines-fallback:empty{display:none}
 
 .delta-lines{display:flex;flex-direction:column;gap:.2rem;margin-top:.15rem}
 .delta-line{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}
+
+/* Modal */
+.modal[hidden]{display:none !important}
+.modal{
+  position:fixed;inset:0;z-index:40;
+  display:flex;align-items:flex-end;justify-content:center;
+  padding:1rem;
+}
+@media(min-width:640px){
+  .modal{align-items:center}
+}
+.modal-backdrop{
+  position:absolute;inset:0;background:rgba(30,36,30,.45);
+  backdrop-filter:blur(2px);
+}
+.modal-sheet{
+  position:relative;z-index:1;width:min(720px,100%);
+  max-height:min(92vh,820px);overflow:auto;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:1.25rem;padding:1.35rem 1.25rem 1.5rem;
+  box-shadow:0 24px 60px rgba(40,50,40,.28);
+}
+.modal-close{
+  position:absolute;top:.65rem;right:.75rem;
+  width:2rem;height:2rem;border-radius:50%;
+  border:1px solid var(--line);background:var(--accent-soft);
+  color:var(--text);font-size:1.35rem;line-height:1;cursor:pointer;
+}
+.modal-close:hover{background:var(--accent);color:#f7f4ea}
+.modal-kicker{font-size:.78rem;color:var(--accent);font-weight:600;margin-bottom:.35rem}
+.modal-sheet h2{font-size:1.25rem;color:#243028;margin-bottom:.25rem}
+.modal-price{font-size:1.45rem;font-weight:700;font-variant-numeric:tabular-nums;color:#243028;margin:.2rem 0 .35rem}
+body.modal-open{overflow:hidden}
