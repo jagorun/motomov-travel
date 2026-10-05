@@ -209,3 +209,11 @@ blockquote p{margin-top:.2rem}
 .modal-sheet h2{font-size:1.25rem;color:#243028;margin-bottom:.25rem}
 .modal-price{font-size:1.45rem;font-weight:700;font-variant-numeric:tabular-nums;color:#243028;margin:.2rem 0 .35rem}
 body.modal-open{overflow:hidden}
+
+.top-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:1.35rem;height:1.35rem;padding:0 .35rem;
+  border-radius:999px;font-size:.72rem;font-weight:700;
+  background:var(--accent);color:#f7f4ea;letter-spacing:0;
+}
+.hotel-top .hotel-link{color:var(--accent)}

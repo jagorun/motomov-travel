@@ -19,6 +19,15 @@ const CANON = [
 ];
 const CANON_SET = new Set(CANON);
 
+/** Порядок «Мой топ» в разделе Цены. Меняйте этот массив. */
+const MY_TOP = [
+  "Kirman Belazur Resort & Spa 5*",
+  "Bellis Deluxe Hotel 5*",
+  "TUI Blue Sherwood Belek 5* (only adults 16+)",
+  "Papillon Ayscha Hotel 5*"
+];
+const MY_TOP_RANK = new Map(MY_TOP.map((name, i) => [name, i + 1]));
+
 const WX_PLACES = {
   "Анталия": { lat: 36.8969, lon: 30.7133 },
   "Кемер": { lat: 36.5978, lon: 30.5606 }
@@ -31,7 +40,7 @@ let wxChart = null;
 let dynPack = null;
 let tourCaption = "AI · 8 ночей · вылет 31.10.2026";
 let priceHotelsCache = [];
-let priceSort = "price"; // price | name
+let priceSort = "top"; // top | price | name
 
 function rub(n) {
   if (n == null || Number.isNaN(Number(n))) return "нет цены";
@@ -718,29 +727,55 @@ async function loadWeatherHistoryChart() {
   }
 }
 
+function byPriceAsc(a, b) {
+  if (a.price == null) return 1;
+  if (b.price == null) return -1;
+  return a.price - b.price;
+}
+
 function sortedHotels(list, mode) {
   const rows = (list || []).slice();
   if (mode === "name") {
     rows.sort((a, b) => shortName(a.name).localeCompare(shortName(b.name), "ru", { sensitivity: "base" }));
-  } else {
-    rows.sort((a, b) => {
-      if (a.price == null) return 1;
-      if (b.price == null) return -1;
-      return a.price - b.price;
-    });
+    return rows;
   }
+  if (mode === "top") {
+    const inTop = [];
+    const rest = [];
+    const seen = new Set();
+    MY_TOP.forEach(name => {
+      const hit = rows.find(h => h.name === name);
+      if (hit) {
+        inTop.push(hit);
+        seen.add(name);
+      }
+    });
+    rows.forEach(h => {
+      if (!seen.has(h.name)) rest.push(h);
+    });
+    rest.sort(byPriceAsc);
+    return inTop.concat(rest);
+  }
+  rows.sort(byPriceAsc);
   return rows;
+}
+
+function sortTitle(mode) {
+  if (mode === "name") return "Отели по имени";
+  if (mode === "top") return "Мой топ";
+  return "Отели по цене";
 }
 
 function renderHotelList() {
   const list = document.getElementById("list");
   if (!priceHotelsCache.length) return;
   const listHotels = sortedHotels(priceHotelsCache, priceSort);
-  const title = priceSort === "name" ? "Отели по имени" : "Отели по цене";
+  const title = sortTitle(priceSort);
   const head =
     "<div class='list-head'>" +
       "<h2>" + title + "</h2>" +
       "<div class='sort-tabs' id='sort-tabs' role='group' aria-label='Сортировка'>" +
+        "<button type='button' data-sort='top'" + (priceSort === "top" ? " class='active'" : "") + ">Мой топ</button>" +
         "<button type='button' data-sort='price'" + (priceSort === "price" ? " class='active'" : "") + ">По цене</button>" +
         "<button type='button' data-sort='name'" + (priceSort === "name" ? " class='active'" : "") + ">По имени</button>" +
       "</div>" +
@@ -749,10 +784,14 @@ function renderHotelList() {
   list.innerHTML = head + listHotels.map((h, i) => {
     const offers = (h.offers || []).slice(0, 4).map(o => "<div class='kv'><span>" + esc(o.room) + "</span><b>" + rub(o.price) + "</b></div>").join("");
     const reason = h.price == null && h.reason ? "<p class='muted'>" + esc(h.reason) + "</p>" : "";
+    const topRank = MY_TOP_RANK.get(h.name);
+    const rankHtml = topRank
+      ? "<div class='rank'><span class='top-badge' title='Мой топ #" + topRank + "'>" + topRank + "</span></div>"
+      : "<div class='rank'>" + (i + 1) + "</div>";
     return (
-      "<article class='hotel' tabindex='0' role='link' data-hotel='" + esc(h.name) + "' aria-label='Отзывы: " + esc(shortName(h.name)) + "'>" +
+      "<article class='hotel" + (topRank ? " hotel-top" : "") + "' tabindex='0' role='link' data-hotel='" + esc(h.name) + "' aria-label='Отзывы: " + esc(shortName(h.name)) + "'>" +
         "<div>" +
-          "<div class='rank'>" + (i + 1) + "</div>" +
+          rankHtml +
           "<h3 class='hotel-link'>" + esc(h.name) + "</h3>" +
           "<div class='tags'>" +
             (h.room ? "<span class='tag'>" + esc(h.room) + "</span>" : "") +
