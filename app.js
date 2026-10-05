@@ -542,16 +542,181 @@ function switchTab(tab) {
   document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === "panel-" + tab));
 }
 
-function goToReview(name) {
-  const id = reviewId(name);
-  switchTab("reviews");
-  requestAnimationFrame(() => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.classList.add("highlight");
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-    setTimeout(() => el.classList.remove("highlight"), 2200);
+const REVIEW_FRESH_DAYS = 60;
+let reviewView = "fresh"; // fresh | archive
+
+function archiveId(name) {
+  return "archive-" + reviewId(name);
+}
+
+function parseReviewDate(when, refDate) {
+  const s = String(when || "").trim();
+  if (!s) return null;
+  const low = s.toLowerCase();
+  const ref = refDate || new Date();
+
+  function fromParts(y, m, d) {
+    const dt = new Date(y, m - 1, d);
+    return Number.isNaN(dt.getTime()) ? null : dt;
+  }
+  function parseRefIn(str) {
+    let m = String(str).match(/(\d{2})\.(\d{2})\.(\d{4})/);
+    if (m) return fromParts(+m[3], +m[2], +m[1]);
+    m = String(str).match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return fromParts(+m[1], +m[2], +m[3]);
+    return null;
+  }
+  const months = {
+    январ: 1, феврал: 2, март: 3, апрел: 4, май: 5, мая: 5, июн: 6, июл: 7,
+    август: 8, сент: 9, сентябр: 9, октябр: 10, ноябр: 11, декабр: 12,
+    jan: 1, january: 1, feb: 2, february: 2, mar: 3, march: 3, apr: 4, april: 4,
+    may: 5, jun: 6, june: 6, jul: 7, july: 7, aug: 8, august: 8,
+    sep: 9, sept: 9, september: 9, oct: 10, october: 10, nov: 11, november: 11,
+    dec: 12, december: 12
+  };
+  function monthNum(tok) {
+    const t = String(tok || "").toLowerCase();
+    for (const k of Object.keys(months)) {
+      if (t.startsWith(k)) return months[k];
+    }
+    return null;
+  }
+
+  let m = low.match(/около\s+(\d+)\s*мес\.?\s*до\s*(\d{2}\.\d{2}\.\d{4})/);
+  if (m) {
+    const base = parseRefIn(m[2]);
+    if (base) {
+      const d = new Date(base);
+      d.setMonth(d.getMonth() - Number(m[1]));
+      return d;
+    }
+  }
+  m = low.match(/~?\s*(\d+)\s*нед/);
+  if (m) {
+    const base = parseRefIn(s) || new Date(ref);
+    const d = new Date(base);
+    d.setDate(d.getDate() - 7 * Number(m[1]));
+    return d;
+  }
+  m = low.match(/(\d+)\s*недел/);
+  if (m && low.includes("назад")) {
+    const base = parseRefIn(s) || new Date(ref);
+    const d = new Date(base);
+    d.setDate(d.getDate() - 7 * Number(m[1]));
+    return d;
+  }
+  if (low.includes("месяц") && low.includes("назад")) {
+    const base = parseRefIn(s) || new Date(ref);
+    const d = new Date(base);
+    d.setMonth(d.getMonth() - 1);
+    return d;
+  }
+  m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (m) return fromParts(+m[1], +m[2], +m[3]);
+  m = s.match(/^(\d{2})\.(\d{2})\.(\d{4})/);
+  if (m) return fromParts(+m[3], +m[2], +m[1]);
+  m = s.match(/(\d{1,2})\.(\d{2})[.–-](\d{1,2})\.(\d{2})\.(\d{4})/);
+  if (m) return fromParts(+m[5], +m[4], +m[3]);
+  m = s.match(/(\d{1,2})[.–-](\d{1,2})\.(\d{2})\.(\d{4})/);
+  if (m) return fromParts(+m[4], +m[3], +m[2]);
+  m = s.match(/stay\s+([A-Za-z]+)\s+(\d{4})/i);
+  if (m) {
+    const mo = monthNum(m[1]);
+    if (mo) return fromParts(+m[2], mo, 15);
+  }
+  m = s.match(/\b([A-Za-z]{3,9})\s+(\d{4})\b/);
+  if (m) {
+    const mo = monthNum(m[1]);
+    if (mo) return fromParts(+m[2], mo, 15);
+  }
+  m = low.match(/(январ\w*|феврал\w*|март\w*|апрел\w*|ма[йя]|июн\w*|июл\w*|август\w*|сент\w*|октябр\w*|ноябр\w*|декабр\w*)\s*(\d{4})/);
+  if (m) {
+    const mo = monthNum(m[1]);
+    if (mo) {
+      const day = low.includes("конец") ? 25 : 15;
+      return fromParts(+m[2], mo, day);
+    }
+  }
+  if (low.includes("снимок")) {
+    const base = parseRefIn(s);
+    if (base) return base;
+  }
+  return parseRefIn(s);
+}
+
+function splitHotelReviews(h, refDate, freshDays) {
+  const days = freshDays || REVIEW_FRESH_DAYS;
+  const cutoff = new Date(refDate);
+  cutoff.setDate(cutoff.getDate() - days);
+  const hasArchiveField = Array.isArray(h.archive);
+  if (hasArchiveField) {
+    return {
+      fresh: (h.reviews || []).slice(),
+      archive: (h.archive || []).slice()
+    };
+  }
+  const all = (h.reviews || []).slice();
+  const fresh = [], archive = [];
+  all.forEach(r => {
+    const d = parseReviewDate(r.when, refDate);
+    if (d && d >= cutoff) fresh.push({ d, r });
+    else if (d) archive.push({ d, r });
+    else {
+      const w = String(r.when || "").toLowerCase();
+      if (/сент|окт|август|\baug\b|\bsep\b|\boct\b|2026-0[89]|2026-10|\.0[89]\.2026|\.10\.2026/.test(w)) {
+        fresh.push({ d: refDate, r });
+      } else {
+        archive.push({ d: new Date(0), r });
+      }
+    }
   });
+  fresh.sort((a, b) => b.d - a.d);
+  archive.sort((a, b) => b.d - a.d);
+  return { fresh: fresh.map(x => x.r), archive: archive.map(x => x.r) };
+}
+
+function reviewBlocks(list) {
+  if (!list.length) return "<p class='muted'>Пока нет отзывов в этой вкладке.</p>";
+  return list.map(r =>
+    "<blockquote><b>" + esc(r.score) + "</b> · " + esc(r.when) + "<p>" + esc(r.text) + "</p></blockquote>"
+  ).join("");
+}
+
+function ratingHtml(h) {
+  if (h.rating === "н/д" || h.rating == null) {
+    return "<div class='rating'>н/д <span>· отзывы ниже</span></div>";
+  }
+  return "<div class='rating'>" + esc(h.rating) + " <span>/ 5 · " + money.format(h.count) + " отзывов</span></div>";
+}
+
+function setReviewView(view) {
+  reviewView = view === "archive" ? "archive" : "fresh";
+  const freshPane = document.getElementById("reviews-fresh");
+  const archPane = document.getElementById("reviews-archive");
+  if (freshPane) freshPane.hidden = reviewView !== "fresh";
+  if (archPane) archPane.hidden = reviewView !== "archive";
+  document.querySelectorAll("#review-tabs button").forEach(b => {
+    b.classList.toggle("active", b.dataset.revtab === reviewView);
+  });
+}
+
+function highlightEl(el) {
+  if (!el) return;
+  el.classList.add("highlight");
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  setTimeout(() => el.classList.remove("highlight"), 2200);
+}
+
+function goToReview(name) {
+  switchTab("reviews");
+  setReviewView("fresh");
+  requestAnimationFrame(() => highlightEl(document.getElementById(reviewId(name))));
+}
+
+function goToArchiveReview(name) {
+  switchTab("reviews");
+  setReviewView("archive");
+  requestAnimationFrame(() => highlightEl(document.getElementById(archiveId(name))));
 }
 
 function reviews(data) {
@@ -560,16 +725,56 @@ function reviews(data) {
     host.innerHTML = "<h2>Отзывы</h2><p class='empty'>Сводки отзывов ещё нет.</p>";
     return;
   }
+  const refDate = data.updatedAt ? new Date(data.updatedAt) : new Date();
+  const freshDays = data.freshDays || REVIEW_FRESH_DAYS;
   const byName = {};
   data.hotels.forEach(h => { if (h && CANON_SET.has(h.name)) byName[h.name] = h; });
-  const hotels = CANON.map(name => byName[name]).filter(Boolean);
-  host.innerHTML = "<h2>Отзывы</h2><p class='muted'>" + esc(data.source || "") + "</p>" + hotels.map(h => {
-    const bits = (h.reviews || []).map(r => "<blockquote><b>" + esc(r.score) + "</b> · " + esc(r.when) + "<p>" + esc(r.text) + "</p></blockquote>").join("");
-    const rating = h.rating === "н/д" || h.rating == null
-      ? "<div class='rating'>н/д <span>· отзывы ниже</span></div>"
-      : "<div class='rating'>" + esc(h.rating) + " <span>/ 5 · " + money.format(h.count) + " отзывов</span></div>";
-    return "<article class='review' id='" + esc(reviewId(h.name)) + "' data-hotel='" + esc(h.name) + "'><h3>" + esc(h.name) + "</h3>" + rating + bits + "<p class='meta'><a href='" + esc(h.url) + "' target='_blank' rel='noopener'>Карточка Google</a></p></article>";
+  const hotels = CANON.map(name => byName[name]).filter(Boolean).map(h => {
+    const split = splitHotelReviews(h, refDate, freshDays);
+    return { h, fresh: split.fresh, archive: split.archive };
+  });
+
+  let freshCount = 0, archCount = 0;
+  hotels.forEach(x => { freshCount += x.fresh.length; archCount += x.archive.length; });
+
+  const freshHtml = hotels.map(({ h, fresh, archive }) => {
+    const archLink = archive.length
+      ? "<a href='#" + esc(archiveId(h.name)) + "' data-archive-hotel='" + esc(h.name) + "'>Архив (" + archive.length + ")</a>"
+      : "<span class='muted'>Архив пуст</span>";
+    return (
+      "<article class='review' id='" + esc(reviewId(h.name)) + "' data-hotel='" + esc(h.name) + "'>" +
+        "<h3>" + esc(h.name) + "</h3>" +
+        ratingHtml(h) +
+        reviewBlocks(fresh) +
+        "<p class='meta'><a href='" + esc(h.url) + "' target='_blank' rel='noopener'>Карточка Google</a> · " + archLink + "</p>" +
+      "</article>"
+    );
   }).join("");
+
+  const archHtml = hotels.map(({ h, archive }) => {
+    if (!archive.length) return "";
+    return (
+      "<article class='review' id='" + esc(archiveId(h.name)) + "' data-hotel='" + esc(h.name) + "'>" +
+        "<h3>" + esc(h.name) + "</h3>" +
+        "<p class='muted'>Старше " + freshDays + " дней · " + archive.length + " шт.</p>" +
+        reviewBlocks(archive) +
+        "<p class='meta'><a href='#" + esc(reviewId(h.name)) + "' data-fresh-hotel='" + esc(h.name) + "'>К свежим</a> · <a href='" + esc(h.url) + "' target='_blank' rel='noopener'>Карточка Google</a></p>" +
+      "</article>"
+    );
+  }).join("") || "<p class='empty'>Архив пока пуст.</p>";
+
+  host.innerHTML =
+    "<h2>Отзывы</h2>" +
+    "<p class='muted'>" + esc(data.source || "") + "</p>" +
+    "<p class='muted'>Свежие — за последние " + freshDays + " дней (новые сверху). Старше — во вкладке «Архив отзывов». Старые не удаляем.</p>" +
+    "<div class='sort-tabs' id='review-tabs' role='group' aria-label='Отзывы'>" +
+      "<button type='button' data-revtab='fresh' class='active'>Свежие (" + freshCount + ")</button>" +
+      "<button type='button' data-revtab='archive'>Архив отзывов (" + archCount + ")</button>" +
+    "</div>" +
+    "<div id='reviews-fresh'>" + freshHtml + "</div>" +
+    "<div id='reviews-archive' hidden>" + archHtml + "</div>";
+
+  setReviewView("fresh");
 }
 
 function weather(data) {
@@ -788,6 +993,11 @@ function renderHotelList() {
     const rankHtml = topRank
       ? "<div class='rank'><span class='top-badge' title='Мой топ #" + topRank + "'>" + topRank + "</span></div>"
       : "<div class='rank'>" + (i + 1) + "</div>";
+    const series = (dynPack && dynPack.byHotel && dynPack.byHotel[h.name])
+      ? dynPack.byHotel[h.name].series
+      : [];
+    const color = colors[Math.max(0, CANON.indexOf(h.name)) % colors.length];
+    const spark = sparkline(series, color);
     return (
       "<article class='hotel" + (topRank ? " hotel-top" : "") + "' tabindex='0' role='link' data-hotel='" + esc(h.name) + "' aria-label='Отзывы: " + esc(shortName(h.name)) + "'>" +
         "<div>" +
@@ -799,7 +1009,7 @@ function renderHotelList() {
             (h.resort ? "<span class='tag'>" + esc(h.resort) + "</span>" : "") +
           "</div>" + reason + offers +
         "</div>" +
-        "<div class='price'>" + rub(h.price) + "</div>" +
+        "<div class='price-side'>" + spark + "<div class='price'>" + rub(h.price) + "</div></div>" +
       "</article>"
     );
   }).join("");
@@ -852,6 +1062,25 @@ document.getElementById("list").addEventListener("keydown", ev => {
   goToReview(card.dataset.hotel);
 });
 
+document.getElementById("reviews").addEventListener("click", ev => {
+  const tabBtn = ev.target.closest("#review-tabs button");
+  if (tabBtn) {
+    setReviewView(tabBtn.dataset.revtab);
+    return;
+  }
+  const archLink = ev.target.closest("[data-archive-hotel]");
+  if (archLink) {
+    ev.preventDefault();
+    goToArchiveReview(archLink.dataset.archiveHotel);
+    return;
+  }
+  const freshLink = ev.target.closest("[data-fresh-hotel]");
+  if (freshLink) {
+    ev.preventDefault();
+    goToReview(freshLink.dataset.freshHotel);
+  }
+});
+
 document.getElementById("deltas").addEventListener("click", ev => {
   const card = ev.target.closest(".delta-card");
   if (!card) return;
@@ -883,6 +1112,7 @@ function boot() {
     if (!data || !data.updatedAt) return;
     const list = hotels(data) || [];
     renderDynamics(history, list, data.query, { updatedAt: data.updatedAt, slot: data.slot });
+    renderHotelList(); // спарклайны после dynPack
     reviews(rev);
     loadWeatherHistoryChart();
   }).catch(() => {});

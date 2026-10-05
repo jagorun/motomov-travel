@@ -217,3 +217,12 @@ body.modal-open{overflow:hidden}
   background:var(--accent);color:#f7f4ea;letter-spacing:0;
 }
 .hotel-top .hotel-link{color:var(--accent)}
+
+.price-side{
+  display:flex;flex-direction:column;align-items:flex-end;gap:.35rem;
+  flex-shrink:0;
+}
+.price-side .spark{width:64px;height:24px}
+#review-tabs{margin:.65rem 0 1rem}
+#reviews-fresh .review:first-of-type,
+#reviews-archive .review:first-of-type{margin-top:.25rem}
