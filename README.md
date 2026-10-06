@@ -5,6 +5,14 @@
 
 Фильтр: Москва, Аэрофлот, 31.10.2026, 8 ночей, 2 взрослых, AI.
 
+## Канон отелей (14)
+
+Akka Antedon Hotel 5* (`F4=102672570527`, Кемер-Белдиби-Гойнюк), Akra Antalya, Arum Barut Collection, Barut Hemera, Dobedan Exclusive, Kirman Belazur, Nirvana Dolce Vita, Voyage Sorgun, Sidemarin Kirman Premium, Bellis Deluxe, TUI Blue Sherwood Belek, Papillon Ayscha / Belvil / Zeugma.
+
+Исключены: Limak Lara, Crystal Aura Aqua Collection, Concorde De Luxe.
+
+MY_TOP (раздел Цены): 1 Akka Antedon, 2 Belazur, 3 Bellis, 4 Sherwood, 5 Ayscha, далее по цене.
+
 ## Данные
 
 - `data/prices.json` — текущий выпуск (цены, курс, погода «сейчас»)

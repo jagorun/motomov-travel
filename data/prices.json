@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T18:15:00+03:00",
+  "updatedAt": "2026-10-06T21:05:00+03:00",
   "slot": "vecher",
   "query": {
     "operator": "Библио-Глобус",
@@ -12,8 +12,8 @@
     "kids": 0,
     "meal": "AI",
     "currency": "RUB",
-    "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&F4=102626006545&F4=102625202736&F4=102625075928&F4=102625075930&F4=102625075932&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
-    "note": "Вечер 06.10.2026: vs утро 06.10 изменились мин. AI — TUI Blue Sherwood Belek 260840→265022 (+4182); Bellis Deluxe Hotel 264104→269307 (+5203) (Bellis — с дневной проверки 15:26, TUI Blue Sherwood — новое к вечеру, подтверждено 2 запросами); остальные без изменений vs утро. vs вечер 05.10: Sidemarin Kirman Premium +2710; TUI Blue Sherwood Belek +6969; Bellis Deluxe Hotel +8025; Papillon Ayscha Hotel +3043; Papillon Zeugma Hotel +3122; Papillon Belvil Hotel +3293; Nirvana Dolce Vita Hotel +3356; Voyage Sorgun +3452; Dobedan Exclusive Hotel & Spa +3631; Arum Barut Collection +4462; Barut Hemera +4814. Kirman Belazur — в выдаче BG нет предложений на 31.10 (с 15:17 05.10, похоже на стоп-продажу), цена null, последняя 255429. Akra — AI нет (только FB)."
+    "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102672570527&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&F4=102626006545&F4=102625202736&F4=102625075928&F4=102625075930&F4=102625075932&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
+    "note": "Вечер 06.10.2026: vs утро 06.10 изменились мин. AI — TUI Blue Sherwood Belek 260840→265022 (+4182); Bellis Deluxe Hotel 264104→269307 (+5203) (Bellis — с дневной проверки 15:26, TUI Blue Sherwood — новое к вечеру, подтверждено 2 запросами); остальные без изменений vs утро. vs вечер 05.10: Sidemarin Kirman Premium +2710; TUI Blue Sherwood Belek +6969; Bellis Deluxe Hotel +8025; Papillon Ayscha Hotel +3043; Papillon Zeugma Hotel +3122; Papillon Belvil Hotel +3293; Nirvana Dolce Vita Hotel +3356; Voyage Sorgun +3452; Dobedan Exclusive Hotel & Spa +3631; Arum Barut Collection +4462; Barut Hemera +4814. Kirman Belazur — в выдаче BG нет предложений на 31.10 (с 15:17 05.10, похоже на стоп-продажу), цена null, последняя 255429. Akra — AI нет (только FB). Добавлен Akka Antedon Hotel 5* (F4=102672570527, Кемер-Белдиби-Гойнюк): мин. AI 260126 ₽ — DELUXE ROOM LAND VIEW PREMIUM AI (съёмка 2026-10-06T21:05:00+03:00)."
   },
   "usd": {
     "value": 85.7116,
@@ -70,6 +70,36 @@
         {
           "room": "FAMILY ROOM SEA VIEW ULTRA ALL",
           "price": 297768
+        }
+      ]
+    },
+    {
+      "name": "Akka Antedon Hotel 5*",
+      "resort": "Кемер-Белдиби-Гойнюк",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-06T21:05:00+03:00, URL в query.sourceUrl",
+      "news": [
+        "TopHotels рейтинг 2026 ≈4.73 (23 отзыва); общий ~4.7. Август 2026: смешанные отзывы (территория/еда vs сервис/заселение)."
+      ],
+      "price": 260126,
+      "room": "DELUXE ROOM LAND VIEW PREMIUM AI",
+      "offers": [
+        {
+          "room": "DELUXE ROOM LAND VIEW PREMIUM AI",
+          "price": 260126
+        },
+        {
+          "room": "DELUXE ROOM SIDE SEA VIEW PREMIUM AI",
+          "price": 266859
+        },
+        {
+          "room": "DELUXE LARGE ROOM PREMIUM AI",
+          "price": 266859
+        },
+        {
+          "room": "DELUXE ROOM SEA VIEW PREMIUM AI",
+          "price": 273591
         }
       ]
     },
@@ -524,6 +554,18 @@
       ]
     },
     {
+      "name": "Akra Antalya Hotel 5*",
+      "resort": "Анталия, Лара",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-06T18:15:00+03:00, URL в query.sourceUrl",
+      "news": [],
+      "price": null,
+      "room": "",
+      "offers": [],
+      "reason": "В выдаче BG на 31.10.2026 AI/Ultra All нет. Мин. в кадре — DELUXE SEA VIEW ROOM FB FB 474143 (не AI, в цену не ставим)."
+    },
+    {
       "name": "Kirman Belazur Resort & Spa 5*",
       "resort": "Белек",
       "meal": "AI",
@@ -538,18 +580,6 @@
       "lastPrice": 255429,
       "lastPriceAt": "2026-10-05T07:10:00+03:00",
       "reason": "Вечер 06.10: на 31.10.2026 в выдаче BG по-прежнему нет ни одного предложения (нет с 15:17 05.10; 2 запроса подряд по всем 13 отелям). Похоже на стоп-продажу/нет мест. Последняя цена 255429 (утро 05.10)."
-    },
-    {
-      "name": "Akra Antalya Hotel 5*",
-      "resort": "Анталия, Лара",
-      "meal": "AI",
-      "nights": 8,
-      "source": "BG Operator live HTML 2026-10-06T18:15:00+03:00, URL в query.sourceUrl",
-      "news": [],
-      "price": null,
-      "room": "",
-      "offers": [],
-      "reason": "В выдаче BG на 31.10.2026 AI/Ultra All нет. Мин. в кадре — DELUXE SEA VIEW ROOM FB FB 474143 (не AI, в цену не ставим)."
     }
   ]
 }

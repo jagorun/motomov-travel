@@ -1,8 +1,9 @@
 const money = new Intl.NumberFormat("ru-RU");
-const colors = ["#2c6b3c", "#8a5a2b", "#3d6f8a", "#6b4c7a", "#8a3d3d", "#4f6b3c", "#8a6a2b", "#2b6b6b", "#3a5a8a", "#6b5a2b", "#2b5a4a", "#7a4a62", "#4a6b2b"];
+const colors = ["#2c6b3c", "#8a5a2b", "#3d6f8a", "#6b4c7a", "#8a3d3d", "#4f6b3c", "#8a6a2b", "#2b6b6b", "#3a5a8a", "#6b5a2b", "#2b5a4a", "#7a4a62", "#4a6b2b", "#5a7a3c"];
 
 /** Current canon only. History leftovers (Crystal, Limak, Concorde, …) never render. */
 const CANON = [
+  "Akka Antedon Hotel 5*",
   "Akra Antalya Hotel 5*",
   "Arum Barut Collection 5*",
   "Barut Hemera 5*",
@@ -21,6 +22,7 @@ const CANON_SET = new Set(CANON);
 
 /** Порядок «Мой топ» в разделе Цены. Меняйте этот массив. */
 const MY_TOP = [
+  "Akka Antedon Hotel 5*",
   "Kirman Belazur Resort & Spa 5*",
   "Bellis Deluxe Hotel 5*",
   "TUI Blue Sherwood Belek 5* (only adults 16+)",
