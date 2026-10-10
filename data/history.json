@@ -490,6 +490,25 @@
         "Arum Barut Collection 5*": 422901,
         "Barut Hemera 5*": 455794
       }
+    },
+    {
+      "at": "2026-10-10T07:10:00+03:00",
+      "slot": "утро",
+      "source": "бот, BG Operator URL",
+      "hotels": {
+        "Akka Antedon Hotel 5*": 249071,
+        "Sidemarin Kirman Premium 5*": 257506,
+        "Dobedan Exclusive Hotel & Spa 5*": 264619,
+        "TUI Blue Sherwood Belek 5* (only adults 16+)": 268785,
+        "Bellis Deluxe Hotel 5*": 276509,
+        "Papillon Ayscha Hotel 5*": 288500,
+        "Papillon Zeugma Hotel 5*": 294902,
+        "Papillon Belvil Hotel 5*": 311771,
+        "Nirvana Dolce Vita Hotel 5*": 317665,
+        "Voyage Sorgun 5*": 326607,
+        "Arum Barut Collection 5*": 420707,
+        "Barut Hemera 5*": 453429
+      }
     }
   ]
 }
