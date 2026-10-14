@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-14T12:17:00+03:00",
-  "slot": "check",
+  "updatedAt": "2026-10-14T18:05:00+03:00",
+  "slot": "vecher",
   "query": {
     "operator": "Библио-Глобус",
     "from": "Москва",
@@ -13,23 +13,23 @@
     "meal": "AI",
     "currency": "RUB",
     "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102672570527&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&F4=102626006545&F4=102625202736&F4=102625075928&F4=102625075930&F4=102625075932&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
-    "note": "Проверка 14.10.2026 12:17: vs утро 14.10 изменились (2 запроса подряд): Papillon Ayscha Hotel 278444→277641 (-803, -0,3%); Papillon Zeugma Hotel 284765→283862 (-903, -0,3%). Остальные отели с AI без изменений. Kirman Belazur в выдаче BG нет (null). Akra — AI нет (только FB). | Утро 14.10.2026 (2 запроса подряд, идентичны). Вечера 13.10 в history нет (routine FAILED). vs утро 13.10 в среднем -4,47%: Akka Antedon Hotel -13151 (-5,16%); Sidemarin Kirman Premium -13274 (-5,05%); Dobedan Exclusive Hotel & Spa -10574 (-3,98%); TUI Blue Sherwood Belek -13306 (-4,85%); Bellis Deluxe Hotel -13226 (-4,69%); Papillon Ayscha Hotel -15266 (-5,20%); Papillon Belvil Hotel -15274 (-5,15%); Papillon Zeugma Hotel -15284 (-5,09%); Nirvana Dolce Vita Hotel -13440 (-4,17%); Voyage Sorgun -13465 (-4,06%); Arum Barut Collection -13624 (-3,21%); Barut Hemera -13714 (-3,00%). vs проверка 13.10 15:30 в среднем -1,17%: Akka Antedon Hotel -674 (-0,28%); Sidemarin Kirman Premium -697 (-0,28%); Dobedan Exclusive Hotel & Spa -713 (-0,28%); TUI Blue Sherwood Belek -728 (-0,28%); Bellis Deluxe Hotel -749 (-0,28%); Papillon Ayscha Hotel -6412 (-2,25%); Papillon Belvil Hotel -6520 (-2,26%); Papillon Zeugma Hotel -6732 (-2,31%); Nirvana Dolce Vita Hotel -863 (-0,28%); Voyage Sorgun -887 (-0,28%); Arum Barut Collection -11008 (-2,61%); Barut Hemera -12003 (-2,64%). Kirman Belazur — в выдаче BG нет предложений на 31.10 (с 15:17 05.10), цена null, последняя 255429. Akra — AI нет (только FB)."
+    "note": "Вечер 14.10.2026 (1 запрос BG). vs утро 14.10 изменились: Papillon Ayscha Hotel 278444→277641 (-803, -0,3%); Papillon Zeugma Hotel 284765→283862 (-903, -0,3%). Вечера 12–13.10 в history нет (routines FAILED); vs последний вечер 2026-10-11T18:08:00+03:00 в среднем -6,08%: Akka Antedon Hotel -15682 (-6,10%); Sidemarin Kirman Premium -15888 (-5,98%); Dobedan Exclusive Hotel & Spa -17484 (-6,41%); TUI Blue Sherwood Belek -16031 (-5,79%); Bellis Deluxe Hotel -16027 (-5,63%); Papillon Ayscha Hotel -18988 (-6,40%); Papillon Belvil Hotel -38546 (-12,05%); Papillon Zeugma Hotel -19169 (-6,33%); Nirvana Dolce Vita Hotel -16646 (-5,11%); Voyage Sorgun -16759 (-5,01%); Arum Barut Collection -17844 (-4,16%); Barut Hemera -18256 (-3,96%). Кирман Belazur — в выдаче BG нет предложений на 31.10 (с 15:17 05.10), цена null, последняя 255429. Akra — AI нет (только FB). Топ-3 без сдвига ≥1% — инфографику не делал."
   },
   "usd": {
-    "value": 83.8675,
-    "date": "14.10.2026",
-    "note": "ЦБ РФ: курс на 14.10.2026 = 83,8675 (cbr-xml-daily, Timestamp 13.10.2026 20:00 МСК); предыдущий 83,9153 от 13.10.2026."
+    "value": 83.9497,
+    "date": "15.10.2026",
+    "note": "ЦБ РФ: действует курс на 15.10.2026 = 83,9497 (cbr-xml-daily, Timestamp 14.10.2026 18:00 МСК); предыдущий 83,8675 от 14.10.2026."
   },
   "weather": [
     {
       "place": "Анталия сейчас",
-      "temp": "+18°",
-      "text": "14.10.2026, ~07:00 Europe/Moscow (Open-Meteo): +18.4°, умеренный дождь (код 63), ветер ~12 км/ч. Сегодня: +17…+20, возможна гроза (код 95)."
+      "temp": "+17°",
+      "text": "14.10.2026, ~18:00 Europe/Moscow (Open-Meteo): +17.1°, гроза (код 95), ветер ~9 км/ч. Сегодня: +17…+20."
     },
     {
       "place": "Кемер сейчас",
-      "temp": "+19°",
-      "text": "14.10.2026, ~07:00 Europe/Moscow (Open-Meteo): +19.4°, умеренный дождь (код 63), ветер ~6 км/ч. Сегодня: +18…+23, возможна гроза (код 95)."
+      "temp": "+18°",
+      "text": "14.10.2026, ~18:00 Europe/Moscow (Open-Meteo): +17.8°, гроза (код 95), ветер ~11 км/ч. Сегодня: +18…+22."
     },
     {
       "place": "Анталия на 31.10",
@@ -48,7 +48,7 @@
       "resort": "Кемер-Белдиби-Гойнюк",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "TopHotels рейтинг 2026 ≈4.73 (23 отзыва); общий ~4.7. Август 2026: смешанные отзывы (территория/еда vs сервис/заселение)."
       ],
@@ -60,11 +60,11 @@
           "price": 241519
         },
         {
-          "room": "DELUXE LARGE ROOM PREMIUM AI",
+          "room": "DELUXE ROOM SIDE SEA VIEW PREMIUM AI",
           "price": 247539
         },
         {
-          "room": "DELUXE ROOM SIDE SEA VIEW PREMIUM AI",
+          "room": "DELUXE LARGE ROOM PREMIUM AI",
           "price": 247539
         },
         {
@@ -94,7 +94,7 @@
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "TopHotels (stay кон. авг 2026, опубл. 01.09): пирс хвалят (лежаки, бар); дно каменистое; слух о работах по дну после сезона; сервис/уборка спорные."
       ],
@@ -124,7 +124,7 @@
       "resort": "Кемер",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "Biblioglobus сент. 2026: отмечают детский аквапарк и взрослый бассейн с горками; анимация сильная."
       ],
@@ -182,7 +182,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "Coral Travel/Tripadvisor сент. 2026: хвалят сервис, чистоту и кухню, тихий отдых для пар; в авг. 2026 одна жалоба на запах плесени и шумный кондиционер в номере. Смены концепции не видно."
       ],
@@ -208,7 +208,7 @@
       "resort": "Белек, Кадрие",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "TopHotels/Tripadvisor сент. 2026: повторные гости — аквапарк (корабль), зоопарк, детский клуб и Jasmine; концепция семейного AI сохраняется."
       ],
@@ -278,7 +278,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "SaleTur 16.09.2026 (Димасуперк, 5/5): анимация и мини-клуб в плюсе. Смены концепции в этом отзыве нет."
       ],
@@ -336,7 +336,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "Tripadvisor, проживание август 2026: новый пирс с баром; пляжные навесы заменили зонтами; комары; White Party и Gold Party в заезде не проводили."
       ],
@@ -362,7 +362,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "TopHotels 28.08.2026: пирса нет; питание 3/5; одна точка мороженого с очередью."
       ],
@@ -408,7 +408,7 @@
       "resort": "Кемер",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "SaleTur сент. 2026: питание хвалят; пляж/море — сильная сторона; платный sundeck; полный текст частично."
       ],
@@ -474,7 +474,7 @@
       "resort": "Соргун",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "SaleTur 21.08.2026: на шезлонгах QR-коды — заказ прямо с пляжа. TopHotels 25.08.2026: зоны 16+ (взрослый пирс и бассейн) хвалят. Смены концепции не видно."
       ],
@@ -508,7 +508,7 @@
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "HolidayCheck авг 2026: вход в море через пирс/Steg из‑за скал; детклуб; pool bar — концепция без смены."
       ],
@@ -542,7 +542,7 @@
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [],
       "price": 443303,
       "room": "DELUXE ROOM SWIM UP ULTRA ALL",
@@ -562,7 +562,7 @@
       "resort": "Анталия, Лара",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T12:17:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [],
       "price": null,
       "room": "",
@@ -574,7 +574,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-14T07:03:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-14T18:05:00+03:00, URL в query.sourceUrl",
       "news": [
         "HolidayCheck сент. 2026 (Karin 6/6): чистые номера, еда/напитки first class; пляж и лежаки доступны; семейный ultra all без смены концепции."
       ],
@@ -583,7 +583,7 @@
       "offers": [],
       "lastPrice": 255429,
       "lastPriceAt": "2026-10-05T07:10:00+03:00",
-      "reason": "Проверка 14.10 12:17: на 31.10.2026 в выдаче BG по-прежнему нет ни одного предложения (нет с 15:17 05.10; 2 запроса подряд). Похоже на стоп-продажу/нет мест. Последняя цена 255429 (утро 05.10)."
+      "reason": "Вечер 14.10: на 31.10.2026 в выдаче BG по-прежнему нет ни одного предложения (нет с 15:17 05.10; 1 запрос). Похоже на стоп-продажу/нет мест. Последняя цена 255429 (утро 05.10)."
     }
   ]
 }
