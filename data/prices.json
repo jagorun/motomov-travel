@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-23T07:10:00+03:00",
-  "slot": "utro",
+  "updatedAt": "2026-10-23T12:22:00+03:00",
+  "slot": "check",
   "query": {
     "operator": "Библио-Глобус",
     "from": "Москва",
@@ -13,7 +13,7 @@
     "meal": "AI",
     "currency": "RUB",
     "sourceUrl": "https://www.bgoperator.ru/price.shtml?action=price&tid=211&idt=&flt2=100510000863&bfr=1&id_price=121110211811&data=31.10.2026&d2=31.10.2026&f7=8&f3=&f8=FB&f8=AI&ho=0&F4=102672570527&F4=102626219120&F4=102625075944&F4=102625172619&F4=102616566985&F4=102625076730&F4=102625076666&F4=102618366366&F4=102625517426&F4=102626006545&F4=102625202736&F4=102625075928&F4=102625075930&F4=102625075932&ins=0-40000-EUR&flt=100411293179&p=0011019890.0011019890",
-    "note": "Утро 23.10.2026 (2 запроса подряд, идентичны). vs утро 22.10 в среднем -0,75%: Dobedan Exclusive Hotel & Spa 239630→237559 (-2071, -0,9%); Akka Antedon Hotel 243761→241655 (-2106, -0,9%); Sidemarin Kirman Premium 244155→242045 (-2110, -0,9%); Bellis Deluxe Hotel 244647→242533 (-2114, -0,9%); TUI Blue Sherwood Belek 250352→248189 (-2163, -0,9%); Nirvana Dolce Vita Hotel 267075→264767 (-2308, -0,9%); Papillon Ayscha Hotel 269042→266718 (-2324, -0,9%); Papillon Zeugma Hotel 275141→272764 (-2377, -0,9%); Papillon Belvil Hotel 275535→273154 (-2381, -0,9%); Voyage Sorgun 318719→315965 (-2754, -0,9%); Arum Barut Collection 406072→402563 (-3509, -0,9%); Barut Hemera 435583→437768 (+2185, +0,5%). vs вечер 22.10 в среднем -0,86%: Dobedan Exclusive Hotel & Spa 239630→237559 (-2071, -0,9%); Akka Antedon Hotel 243761→241655 (-2106, -0,9%); Sidemarin Kirman Premium 244155→242045 (-2110, -0,9%); Bellis Deluxe Hotel 244647→242533 (-2114, -0,9%); TUI Blue Sherwood Belek 250352→248189 (-2163, -0,9%); Nirvana Dolce Vita Hotel 267075→264767 (-2308, -0,9%); Papillon Ayscha Hotel 269042→266718 (-2324, -0,9%); Papillon Zeugma Hotel 275141→272764 (-2377, -0,9%); Papillon Belvil Hotel 275535→273154 (-2381, -0,9%); Voyage Sorgun 318719→315965 (-2754, -0,9%); Arum Barut Collection 406072→402563 (-3509, -0,9%); Barut Hemera 441583→437768 (-3815, -0,9%). Kirman Belazur — в выдаче BG нет предложений на 31.10 (с 15:17 05.10), цена null, последняя 255429. Akra — AI нет (только FB)."
+    "note": "Проверка 23.10.2026 12:22: vs утро 07:10 изменились (3 запроса подряд, идентичны): Akka Antedon Hotel 241655→нет в выдаче; Papillon Ayscha Hotel 266718→нет в выдаче; Arum Barut Collection 402563→452883 (+50320, +12,5%); Barut Hemera 437768→нет в выдаче. Kirman Belazur в выдаче BG нет (null). Akra — AI нет (только FB). | Утро 23.10.2026 (2 запроса подряд, идентичны). vs утро 22.10 в среднем -0,75%: Dobedan Exclusive Hotel & Spa 239630→237559 (-2071, -0,9%); Akka Antedon Hotel 243761→241655 (-2106, -0,9%); Sidemarin Kirman Premium 244155→242045 (-2110, -0,9%); Bellis Deluxe Hotel 244647→242533 (-2114, -0,9%); TUI Blue Sherwood Belek 250352→248189 (-2163, -0,9%); Nirvana Dolce Vita Hotel 267075→264767 (-2308, -0,9%); Papillon Ayscha Hotel 269042→266718 (-2324, -0,9%); Papillon Zeugma Hotel 275141→272764 (-2377, -0,9%); Papillon Belvil Hotel 275535→273154 (-2381, -0,9%); Voyage Sorgun 318719→315965 (-2754, -0,9%); Arum Barut Collection 406072→402563 (-3509, -0,9%); Barut Hemera 435583→437768 (+2185, +0,5%). vs вечер 22.10 в среднем -0,86%: Dobedan Exclusive Hotel & Spa 239630→237559 (-2071, -0,9%); Akka Antedon Hotel 243761→241655 (-2106, -0,9%); Sidemarin Kirman Premium 244155→242045 (-2110, -0,9%); Bellis Deluxe Hotel 244647→242533 (-2114, -0,9%); TUI Blue Sherwood Belek 250352→248189 (-2163, -0,9%); Nirvana Dolce Vita Hotel 267075→264767 (-2308, -0,9%); Papillon Ayscha Hotel 269042→266718 (-2324, -0,9%); Papillon Zeugma Hotel 275141→272764 (-2377, -0,9%); Papillon Belvil Hotel 275535→273154 (-2381, -0,9%); Voyage Sorgun 318719→315965 (-2754, -0,9%); Arum Barut Collection 406072→402563 (-3509, -0,9%); Barut Hemera 441583→437768 (-3815, -0,9%). Kirman Belazur — в выдаче BG нет предложений на 31.10 (с 15:17 05.10), цена null, последняя 255429. Akra — AI нет (только FB)."
   },
   "usd": {
     "value": 81.1255,
@@ -48,7 +48,7 @@
       "resort": "Кемер",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "Biblioglobus сент. 2026: отмечают детский аквапарк и взрослый бассейн с горками; анимация сильная."
       ],
@@ -102,49 +102,11 @@
       ]
     },
     {
-      "name": "Akka Antedon Hotel 5*",
-      "resort": "Кемер-Белдиби-Гойнюк",
-      "meal": "AI",
-      "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
-      "news": [
-        "TopHotels рейтинг 2026 ≈4.73 (23 отзыва); общий ~4.7. Август 2026: смешанные отзывы (территория/еда vs сервис/заселение)."
-      ],
-      "price": 241655,
-      "room": "DELUXE ROOM LAND VIEW PREMIUM AI",
-      "offers": [
-        {
-          "room": "DELUXE ROOM LAND VIEW PREMIUM AI",
-          "price": 241655
-        },
-        {
-          "room": "DELUXE ROOM SIDE SEA VIEW PREMIUM AI",
-          "price": 247506
-        },
-        {
-          "room": "DELUXE LARGE ROOM PREMIUM AI",
-          "price": 247506
-        },
-        {
-          "room": "DELUXE ROOM SEA VIEW PREMIUM AI",
-          "price": 253357
-        },
-        {
-          "room": "DELUXE AMOUR SUITE PREMIUM AI",
-          "price": 292268
-        },
-        {
-          "room": "DELUXE FAMILY SUITE PREMIUM AI",
-          "price": 304165
-        }
-      ]
-    },
-    {
       "name": "Sidemarin Kirman Premium 5*",
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "TopHotels (stay кон. авг 2026, опубл. 01.09): пирс хвалят (лежаки, бар); дно каменистое; слух о работах по дну после сезона; сервис/уборка спорные."
       ],
@@ -174,19 +136,19 @@
       "resort": "Белек, Кадрие",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "TopHotels/Tripadvisor сент. 2026: повторные гости — аквапарк (корабль), зоопарк, детский клуб и Jasmine; концепция семейного AI сохраняется."
       ],
       "price": 242533,
-      "room": "STANDARD ROOM GARDEN VIEW ULTRA ALL",
+      "room": "CAMELIA GARDEN VIEW ULTRA ALL",
       "offers": [
         {
-          "room": "STANDARD ROOM GARDEN VIEW ULTRA ALL",
+          "room": "CAMELIA GARDEN VIEW ULTRA ALL",
           "price": 242533
         },
         {
-          "room": "CAMELIA GARDEN VIEW ULTRA ALL",
+          "room": "STANDARD ROOM GARDEN VIEW ULTRA ALL",
           "price": 242533
         },
         {
@@ -244,7 +206,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "Coral Travel/Tripadvisor сент. 2026: хвалят сервис, чистоту и кухню, тихий отдых для пар; в авг. 2026 одна жалоба на запах плесени и шумный кондиционер в номере. Смены концепции не видно."
       ],
@@ -270,7 +232,7 @@
       "resort": "Кемер",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "SaleTur сент. 2026: питание хвалят; пляж/море — сильная сторона; платный sundeck; полный текст частично."
       ],
@@ -332,69 +294,11 @@
       ]
     },
     {
-      "name": "Papillon Ayscha Hotel 5*",
-      "resort": "Белек",
-      "meal": "AI",
-      "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
-      "news": [
-        "SaleTur 16.09.2026 (Димасуперк, 5/5): анимация и мини-клуб в плюсе. Смены концепции в этом отзыве нет."
-      ],
-      "price": 266718,
-      "room": "STANDART ROOM LAND VIEW ULTRA ALL",
-      "offers": [
-        {
-          "room": "STANDART ROOM LAND VIEW ULTRA ALL",
-          "price": 266718
-        },
-        {
-          "room": "SEAVIEW STANDARD ROOM ULTRA ALL",
-          "price": 279395
-        },
-        {
-          "room": "EXECUTIVE ROOM ULTRA ALL",
-          "price": 309822
-        },
-        {
-          "room": "SELECT FAMILY SWIM UP ULTRA ALL",
-          "price": 319378
-        },
-        {
-          "room": "FAMILY ROOM ULTRA ALL",
-          "price": 394664
-        },
-        {
-          "room": "FAMILY CONNECTION ROOM LANDVIEW ULTRA ALL",
-          "price": 436988
-        },
-        {
-          "room": "CONNECTION FAMILY ROOM SEA VIEW ULTRA ALL",
-          "price": 462440
-        },
-        {
-          "room": "KING SUITE ULTRA ALL",
-          "price": 492574
-        },
-        {
-          "room": "DELUXE VILLA ULTRA ALL",
-          "price": 799664
-        },
-        {
-          "room": "PRESIDENTIAL VILLA ULTRA ALL",
-          "price": 1238309
-        },
-        {
-          "room": "GRAND FAMILY VILLA ULTRA ALL",
-          "price": 1238309
-        }
-      ]
-    },
-    {
       "name": "Papillon Zeugma Hotel 5*",
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "TopHotels 28.08.2026: пирса нет; питание 3/5; одна точка мороженого с очередью."
       ],
@@ -440,7 +344,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "Tripadvisor, проживание август 2026: новый пирс с баром; пляжные навесы заменили зонтами; комары; White Party и Gold Party в заезде не проводили."
       ],
@@ -466,7 +370,7 @@
       "resort": "Соргун",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "SaleTur 21.08.2026: на шезлонгах QR-коды — заказ прямо с пляжа. TopHotels 25.08.2026: зоны 16+ (взрослый пирс и бассейн) хвалят. Смены концепции не видно."
       ],
@@ -496,17 +400,13 @@
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "HolidayCheck авг 2026: вход в море через пирс/Steg из‑за скал; детклуб; pool bar — концепция без смены."
       ],
-      "price": 402563,
-      "room": "QUEEN FAMILY SUITE ULTRA ALL",
+      "price": 452883,
+      "room": "DELUXE FAMILY SUITE ULTRA ALL",
       "offers": [
-        {
-          "room": "QUEEN FAMILY SUITE ULTRA ALL",
-          "price": 402563
-        },
         {
           "room": "DELUXE FAMILY SUITE ULTRA ALL",
           "price": 452883
@@ -518,31 +418,57 @@
       ]
     },
     {
+      "name": "Akka Antedon Hotel 5*",
+      "resort": "Кемер-Белдиби-Гойнюк",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
+      "news": [
+        "TopHotels рейтинг 2026 ≈4.73 (23 отзыва); общий ~4.7. Август 2026: смешанные отзывы (территория/еда vs сервис/заселение)."
+      ],
+      "price": null,
+      "room": "",
+      "offers": [],
+      "lastPrice": 241655,
+      "lastPriceAt": "2026-10-23T07:10:00+03:00",
+      "reason": "Проверка 23.10 12:22: отель пропал из выдачи BG на 31.10.2026 — ни одного предложения (3 запроса подряд, идентичны). Похоже на стоп-продажу/нет мест. Последняя цена 241655 (утро 23.10)."
+    },
+    {
+      "name": "Papillon Ayscha Hotel 5*",
+      "resort": "Белек",
+      "meal": "AI",
+      "nights": 8,
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
+      "news": [
+        "SaleTur 16.09.2026 (Димасуперк, 5/5): анимация и мини-клуб в плюсе. Смены концепции в этом отзыве нет."
+      ],
+      "price": null,
+      "room": "",
+      "offers": [],
+      "lastPrice": 266718,
+      "lastPriceAt": "2026-10-23T07:10:00+03:00",
+      "reason": "Проверка 23.10 12:22: отель пропал из выдачи BG на 31.10.2026 — ни одного предложения (3 запроса подряд, идентичны). Похоже на стоп-продажу/нет мест. Последняя цена 266718 (утро 23.10)."
+    },
+    {
       "name": "Barut Hemera 5*",
       "resort": "Сиде",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [],
-      "price": 437768,
-      "room": "DELUXE ROOM SWIM UP ULTRA ALL",
-      "offers": [
-        {
-          "room": "DELUXE ROOM SWIM UP ULTRA ALL",
-          "price": 437768
-        },
-        {
-          "room": "FAMILY ROOM ULTRA ALL",
-          "price": 447520
-        }
-      ]
+      "price": null,
+      "room": "",
+      "offers": [],
+      "lastPrice": 437768,
+      "lastPriceAt": "2026-10-23T07:10:00+03:00",
+      "reason": "Проверка 23.10 12:22: отель пропал из выдачи BG на 31.10.2026 — ни одного предложения (3 запроса подряд, идентичны). Похоже на стоп-продажу/нет мест. Последняя цена 437768 (утро 23.10)."
     },
     {
       "name": "Akra Antalya Hotel 5*",
       "resort": "Анталия, Лара",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [],
       "price": null,
       "room": "",
@@ -554,7 +480,7 @@
       "resort": "Белек",
       "meal": "AI",
       "nights": 8,
-      "source": "BG Operator live HTML 2026-10-23T07:10:00+03:00, URL в query.sourceUrl",
+      "source": "BG Operator live HTML 2026-10-23T12:22:00+03:00, URL в query.sourceUrl",
       "news": [
         "HolidayCheck сент. 2026 (Karin 6/6): чистые номера, еда/напитки first class; пляж и лежаки доступны; семейный ultra all без смены концепции."
       ],
@@ -563,7 +489,7 @@
       "offers": [],
       "lastPrice": 255429,
       "lastPriceAt": "2026-10-05T07:10:00+03:00",
-      "reason": "Утро 23.10: на 31.10.2026 в выдаче BG по-прежнему нет ни одного предложения (нет с 15:17 05.10; 2 запроса подряд). Похоже на стоп-продажу/нет мест. Последняя цена 255429 (утро 05.10)."
+      "reason": "Проверка 23.10 12:22: на 31.10.2026 в выдаче BG по-прежнему нет ни одного предложения (3 запроса подряд). Похоже на стоп-продажу/нет мест. Последняя цена 255429 (утро 05.10)."
     }
   ]
 }
