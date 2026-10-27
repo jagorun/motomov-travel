@@ -1325,6 +1325,19 @@
         "Barut Hemera 5*": 419148,
         "Arum Barut Collection 5*": 440163
       }
+    },
+    {
+      "at": "2026-10-27T18:10:00+03:00",
+      "slot": "вечер",
+      "source": "бот, BG Operator URL",
+      "hotels": {
+        "Dobedan Exclusive Hotel & Spa 5*": 234831,
+        "Sidemarin Kirman Premium 5*": 239265,
+        "Nirvana Dolce Vita Hotel 5*": 261727,
+        "Voyage Sorgun 5*": 312336,
+        "Barut Hemera 5*": 419148,
+        "Arum Barut Collection 5*": 440163
+      }
     }
   ]
 }
